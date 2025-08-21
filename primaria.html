@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Nivel Primario | Colegio Wellspring</title>
+    <meta name="description" content="Descubre el Nivel Primario del Colegio Wellspring. Un programa bilingüe y completo que fomenta el desarrollo de las habilidades académicas, sociales y emocionales.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://www.wellspring.com.ar/primaria.html">
+    
+    <meta property="og:title" content="Nivel Primario | Colegio Wellspring">
+    <meta property="og:description" content="Formando las bases académicas y valores para el futuro.">
+    <meta property="og:image" content="https://picsum.photos/id/1015/1600/900">
+    <meta property="og:url" content="http://www.wellspring.com.ar/primaria.html">
+    <meta property="og:type" content="article">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nivel Primario | Colegio Wellspring">
+    <meta name="twitter:description" content="Programa bilingüe para el nivel primario con foco en valores y excelencia.">
+    <meta name="twitter:image" content="https://picsum.photos/id/1015/1600/900">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#004B87',
+                        secondary: '#1E90FF',
+                        accent: '#00BFFF',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800">
+
+    <header class="fixed w-full z-50 bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="index.html" class="flex-shrink-0" aria-label="Volver a la página de inicio">
+                <img src="img/logo-wellspring-pilar.jpg" alt="Logo del Colegio Wellspring" class="h-10">
+            </a>
+             <nav class="hidden md:flex space-x-4">
+                 <a href="index.html" class="hover:text-secondary flex items-center space-x-1" aria-label="Ir a la página de inicio">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9.75L12 4l9 5.75V20a1 1 0 01-1 1h-6v-6H10v6H4a1 1 0 01-1-1V9.75z" />
+                    </svg>
+                </a>
+                
+                <div class="relative group">
+                    <a href="quienes-somos.html" class="hover:text-secondary flex items-center space-x-1">
+                        <span>¿Quiénes Somos?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg hidden group-hover:block hover:block">
+                        <a href="quienes-somos.html#historia" class="block px-4 py-2 hover:bg-gray-100">Nuestro Colegio</a>
+                        <a href="quienes-somos.html#mision" class="block px-4 py-2 hover:bg-gray-100">Misión</a>
+                        <a href="quienes-somos.html#vision" class="block px-4 py-2 hover:bg-gray-100">Visión</a>
+                        <a href="quienes-somos.html#valores" class="block px-4 py-2 hover:bg-gray-100">Valores</a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <a href="index.html#niveles" class="hover:text-secondary flex items-center space-x-1">
+                        <span>Académico</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg hidden group-hover:block hover:block">
+                        <a href="jardin.html" class="block px-4 py-2 hover:bg-gray-100">Kinder</a>
+                        <a href="primaria.html" class="block px-4 py-2 hover:bg-gray-100">Primaria</a>
+                        <a href="secundaria.html" class="block px-4 py-2 hover:bg-gray-100">Secundaria</a>
+                        <a href="becas.html" class="block px-4 py-2 hover:bg-gray-100">Exámenes, Becas y Convenios</a>
+                    </div>
+                </div>
+                <a href="dptos.html" class="hover:text-secondary">Departamentos</a>
+                <a href="#contacto" class="hover:text-secondary">Contacto</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Abrir menú de navegación">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        
+        <nav id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <button id="qs-btn" class="w-full text-left px-4 py-2 hover:bg-gray-100 flex justify-between items-center" aria-expanded="false" aria-controls="qs-submenu">
+                <span>¿Quiénes Somos?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div id="qs-submenu" class="hidden bg-gray-50">
+                <a href="quienes-somos.html" class="block px-6 py-2 hover:bg-gray-100">Nuestro Colegio</a>
+                <a href="quienes-somos.html#mision" class="block px-6 py-2 hover:bg-gray-100">Misión</a>
+                <a href="quienes-somos.html#vision" class="block px-6 py-2 hover:bg-gray-100">Visión</a>
+                <a href="quienes-somos.html#valores" class="block px-6 py-2 hover:bg-gray-100">Valores</a>
+            </div>
+
+            <button id="niveles-btn" class="w-full text-left px-4 py-2 hover:bg-gray-100 flex justify-between items-center" aria-expanded="false" aria-controls="niveles-submenu">
+                <span>Académico</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div id="niveles-submenu" class="hidden bg-gray-50">
+                <a href="jardin.html" class="block px-6 py-2 hover:bg-gray-100">Kinder</a>
+                <a href="primaria.html" class="block px-6 py-2 hover:bg-gray-100">Primaria</a>
+                <a href="secundaria.html" class="block px-6 py-2 hover:bg-gray-100">Secundaria</a>
+                <a href="becas.html" class="block px-4 py-2 hover:bg-gray-100">Exámenes, Becas y Convenios</a>
+            </div>
+
+            <a href="dptos.html" class="block px-4 py-2 hover:bg-gray-100">Departamentos</a>
+            <a href="#contacto" class="block px-4 py-2 hover:bg-gray-100">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="h-96 bg-cover bg-center text-white px-4 relative" style="background-image: url('https://picsum.photos/id/1015/1600/900');" aria-labelledby="main-heading">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="p-6 rounded-lg text-center text-white">
+                    <h1 id="main-heading" class="text-4xl font-bold mb-2">Nivel Primario</h1>
+                    <p class="text-lg">Formando las bases académicas y valores para el futuro</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto py-12 px-4">
+            <h2 class="text-3xl font-bold text-primary mb-4">Sobre la Primaria</h2>
+            <p class="mb-6">En el Nivel Primario de Wellspring, acompañamos a los estudiantes en el desarrollo de sus habilidades cognitivas, sociales y emocionales. Fomentamos la autonomía, el pensamiento crítico y la responsabilidad, brindando una educación integral en un ambiente seguro y estimulante.</p>
+        </section>
+
+        <section id="equipo" class="bg-gray-100 py-12 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-primary mb-8">Nuestro Equipo</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="bg-white shadow rounded-lg p-4 text-center">
+                        <img src="https://picsum.photos/id/1027/200/200" alt="Retrato de Carlos Martínez, director del nivel primario" class="mx-auto rounded-full h-32 w-32 object-cover mb-4">
+                        <h3 class="font-semibold">Carlos Martínez</h3>
+                        <p class="text-sm text-gray-600">Director Nivel Primario</p>
+                    </div>
+                    <div class="bg-white shadow rounded-lg p-4 text-center">
+                        <img src="https://picsum.photos/id/1025/200/200" alt="Retrato de Ana López, docente de matemática" class="mx-auto rounded-full h-32 w-32 object-cover mb-4">
+                        <h3 class="font-semibold">Ana López</h3>
+                        <p class="text-sm text-gray-600">Docente de Matemática</p>
+                    </div>
+                    <div class="bg-white shadow rounded-lg p-4 text-center">
+                        <img src="https://picsum.photos/id/1033/200/200" alt="Retrato de Pedro Sánchez, docente de lengua" class="mx-auto rounded-full h-32 w-32 object-cover mb-4">
+                        <h3 class="font-semibold">Pedro Sánchez</h3>
+                        <p class="text-sm text-gray-600">Docente de Lengua</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="material" class="container mx-auto py-12 px-4">
+            <h2 class="text-3xl font-bold text-primary mb-6">Material de Estudio</h2>
+            <ul class="space-y-4">
+                <li><a href="material/primaria-1ergrado.pdf" class="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">1° Grado - Lista de Material</a></li>
+                <li><a href="material/primaria-3ergrado.pdf" class="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">3° Grado - Lista de Material</a></li>
+                <li><a href="material/primaria-6togrado.pdf" class="text-secondary hover:underline" target="_blank" rel="noopener noreferrer">6° Grado - Lista de Material</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+  <footer id="contacto" class="bg-gray-900 text-white py-12 mt-16">
+        <div class="container mx-auto grid md:grid-cols-3 gap-12 px-6 items-start">
+            <div>
+                <h3 class="text-xl font-bold mb-4 text-secondary text-center">Contacto</h3>
+                <address class="not-italic text-center">
+                    <p class="mb-2">📍 Dirección: Las Camelias 3883, B1669 Manuel Alberti, Provincia de Buenos Aires</p>
+                    <p class="mb-2">📞 Teléfono: <a href="tel:+541112345678" class="hover:underline">+54 11 1234-5678</a></p>
+                    <p class="mb-2">📧 Email: <a href="mailto:info@wellspring.edu.ar" class="hover:underline">info@wellspring.edu.ar</a></p>
+                </address>
+            </div>
+
+            <div class="text-center">
+                <h3 class="text-xl font-bold mb-4 text-secondary">Ubicación</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.4121517086025!2d-58.7508083247687!3d-34.43401994915527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca1a8f6748d0d%3A0x36d9ac5c2a0b76b4!2sLas%20Camelias%203883%2C%20B1669%20Manuel%20Alberti%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1724013440000!5m2!1ses-419!2sar" 
+                    width="100%" 
+                    height="200" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación del Colegio Wellspring en Google Maps">
+                </iframe>
+                <div class="mt-4">
+                    <a href="https://forms.gle/xxxxx" target="_blank" class="bg-secondary hover:bg-primary text-white px-6 py-2 rounded-lg shadow-md transition">
+                        Trabajá con nosotros
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h3 class="text-xl font-bold mb-4 text-secondary">Seguinos</h3>
+                <div class="flex justify-end space-x-4 justify-center">
+                    <a href="https://www.instagram.com/colegiowellspring" target="_blank" class="hover:text-pink-500" aria-label="Instagram del Colegio Wellspring">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.75a1 1 0 110 2 1 1 0 010-2z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/colegiowellspring" target="_blank" class="hover:text-blue-500" aria-label="Facebook del Colegio Wellspring">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M13 3h4a1 1 0 011 1v4a1 1 0 01-1 1h-3v2h3a1 1 0 01.96 1.27l-1 4a1 1 0 01-.96.73H14v7a1 1 0 01-1 1h-4a1 1 0 01-1-1v-7H6a1 1 0 01-1-1V9a1 1 0 011-1h3V6a3 3 0 013-3z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/" target="_blank" class="hover:text-red-500" aria-label="Canal de YouTube del Colegio Wellspring">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184A3.999 3.999 0 0122 7.135v9.73a3.999 3.999 0 01-2.385 3.951c-1.49.595-7.646.595-7.646.595s-6.156 0-7.646-.595A3.999 3.999 0 012 16.865v-9.73a3.999 3.999 0 012.385-3.951C5.875 2.54 12.031 2.54 12.031 2.54s6.156 0 7.646.595zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-400">
+            <p>© 2025 Wellspring. Todos los derechos reservados.</p>
+            <p>By SCrem</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
