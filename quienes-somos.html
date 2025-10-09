@@ -11,7 +11,7 @@
 
     <meta property="og:title" content="Quiénes Somos | Colegio Wellspring">
     <meta property="og:description" content="Conoce nuestra historia y los pilares que nos definen: misión, visión y valores.">
-    <meta property="og:image" content="img/historia.jpeg">
+    <meta property="og:image" content="img/historia.jpeg"> 
     <meta property="og:url" content="http://www.wellspring.com.ar/quienes-somos.html">
     <meta property="og:type" content="article">
 
@@ -26,37 +26,36 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#004B87',
-                        secondary: '#1E90FF',
-                        accent: '#00BFFF',
+                        primary: '#004B87', // Azul Oscuro principal
+                        secondary: '#1E90FF', // Azul Medio/Claro, conservado por ser tu color de énfasis
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="font-sans text-gray-800">
-
-    <header class="fixed w-full z-50 bg-white shadow">
+<body> 
+    <header class="fixed w-full z-50 shadow bg-gray-900/70 backdrop-blur-sm top-0">
         <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="index.html" class="flex-shrink-0" aria-label="Volver a la página de inicio">
-                <img src="img/logo-wellspring-pilar.jpg" alt="Logo del Colegio Wellspring" class="h-10">
+            <a href="index.html" class="flex-shrink-0">
+                <img src="img/logo Wellspring School.png" alt="Logo del Colegio Wellspring" class="h-10">
             </a>
-            <nav class="hidden md:flex space-x-4">
+            
+            <nav id="desktop-nav" class="hidden md:flex space-x-4 text-white">
                 <a href="index.html" class="hover:text-secondary flex items-center space-x-1" aria-label="Ir a la página de inicio">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-current" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9.75L12 4l9 5.75V20a1 1 0 01-1 1h-6v-6H10v6H4a1 1 0 01-1-1V9.75z" />
                     </svg>
                 </a>
                 
                 <div class="relative group">
-                    <a href="quienes-somos.html" class="hover:text-secondary flex items-center space-x-1">
+                    <a href="quienes-somos.html" class="hover:text-secondary flex items-center space-x-1" aria-expanded="false" aria-controls="qs-submenu-desktop"> 
                         <span>¿Quiénes Somos?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-current transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24"> 
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </a>
-                    <div class="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg hidden group-hover:block hover:block">
+                    <div id="qs-submenu-desktop" class="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg hidden group-hover:block text-gray-800 transition duration-300 z-50">
                         <a href="quienes-somos.html#historia" class="block px-4 py-2 hover:bg-gray-100">Nuestro Colegio</a> 
                         <a href="quienes-somos.html#mision" class="block px-4 py-2 hover:bg-gray-100">Misión</a>
                         <a href="quienes-somos.html#vision" class="block px-4 py-2 hover:bg-gray-100">Visión</a>
@@ -65,13 +64,13 @@
                 </div>
 
                 <div class="relative group">
-                    <a href="index.html#niveles" class="hover:text-secondary flex items-center space-x-1">
+                    <a href="index.html#niveles" class="hover:text-secondary flex items-center space-x-1" aria-expanded="false" aria-controls="niveles-submenu-desktop">
                         <span>Académico</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-current transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </a>
-                    <div class="absolute left-0 mt-2 w-40 bg-white border rounded shadow-lg hidden group-hover:block hover:block">
+                    <div id="niveles-submenu-desktop" class="absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg hidden group-hover:block text-gray-800 transition duration-300 z-50">
                         <a href="jardin.html" class="block px-4 py-2 hover:bg-gray-100">Kinder</a>
                         <a href="primaria.html" class="block px-4 py-2 hover:bg-gray-100">Primaria</a>
                         <a href="secundaria.html" class="block px-4 py-2 hover:bg-gray-100">Secundaria</a>
@@ -83,119 +82,216 @@
                 <a href="#contacto" class="hover:text-secondary">Contacto</a>
             </nav>
 
-            <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Abrir menú de navegación">
-                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
+                <svg id="icon-open" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="icon-close" class="w-6 h-6 text-white hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
           
-        <nav id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <button id="qs-btn" class="w-full text-left px-4 py-2 hover:bg-gray-100 flex justify-between items-center" aria-expanded="false" aria-controls="qs-submenu">
+        <nav id="mobile-menu" class="hidden md:hidden bg-white border-t text-gray-800 transition-all duration-300 ease-in-out">
+            
+            <a href="quienes-somos.html" class="w-full text-left px-4 py-3 hover:bg-gray-100 flex justify-between items-center font-semibold border-b">
                 <span>¿Quiénes Somos?</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-            </button>
-            <div id="qs-submenu" class="hidden bg-gray-50">
-                <a href="quienes-somos.html" class="block px-6 py-2 hover:bg-gray-100">Nuestro Colegio</a>
-                <a href="quienes-somos.html#mision" class="block px-6 py-2 hover:bg-gray-100">Misión</a>
-                <a href="quienes-somos.html#vision" class="block px-6 py-2 hover:bg-gray-100">Visión</a>
-                <a href="quienes-somos.html#valores" class="block px-6 py-2 hover:bg-gray-100">Valores</a>
+            </a>
+            <div id="qs-submenu" class="bg-gray-50 border-b">
+                <a href="quienes-somos.html#historia" class="block px-6 py-2 hover:bg-gray-100 text-sm">Nuestro Colegio</a>
+                <a href="quienes-somos.html#mision" class="block px-6 py-2 hover:bg-gray-100 text-sm">Misión</a>
+                <a href="quienes-somos.html#vision" class="block px-6 py-2 hover:bg-gray-100 text-sm">Visión</a>
+                <a href="quienes-somos.html#valores" class="block px-6 py-2 hover:bg-gray-100 text-sm">Valores</a>
             </div>
 
-            <button id="niveles-btn" class="w-full text-left px-4 py-2 hover:bg-gray-100 flex justify-between items-center" aria-expanded="false" aria-controls="niveles-submenu">
+            <a href="#" class="w-full text-left px-4 py-3 hover:bg-gray-100 flex justify-between items-center font-semibold border-b">
                 <span>Académico</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
-            </button>
-            <div id="niveles-submenu" class="hidden bg-gray-50">
-                <a href="jardin.html" class="block px-6 py-2 hover:bg-gray-100">Kinder</a>
-                <a href="primaria.html" class="block px-6 py-2 hover:bg-gray-100">Primaria</a>
-                <a href="secundaria.html" class="block px-6 py-2 hover:bg-gray-100">Secundaria</a>
-                <a href="becas.html" class="block px-4 py-2 hover:bg-gray-100">Exámenes, Becas y Convenios</a>
+            </a>
+            <div id="niveles-submenu" class="bg-gray-50 border-b">
+                <a href="jardin.html" class="block px-6 py-2 hover:bg-gray-100 text-sm">Kinder</a>
+                <a href="primaria.html" class="block px-6 py-2 hover:bg-gray-100 text-sm">Primaria</a>
+                <a href="secundaria.html" class="block px-6 py-2 hover:bg-gray-100 text-sm">Secundaria</a>
+                <a href="becas.html" class="block px-6 py-2 hover:bg-gray-100 text-sm">Exámenes, Becas y Convenios</a>
             </div>
 
-            <a href="dptos.html" class="block px-4 py-2 hover:bg-gray-100">Departamentos</a>
-            <a href="#contacto" class="block px-4 py-2 hover:bg-gray-100">Contacto</a>
+            <a href="dptos.html" class="block px-4 py-3 hover:bg-gray-100 font-semibold border-b">Departamentos</a>
+            <a href="#contacto" class="block px-4 py-3 hover:bg-gray-100 font-semibold">Contacto</a>
         </nav>
     </header>
 
+
     <main>
-        <section id="inicio" class="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white px-4" style="background-image: url('img/historia.jpeg');" aria-labelledby="main-heading">
+        <section id="inicio" class="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white px-4" style="background-image: url('img/NuestroColegioHero.jpg');" aria-labelledby="main-heading">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="relative p-6 md:p-8">
-                <h1 id="main-heading" class="text-3xl md:text-6xl font-bold mb-4">Quiénes Somos</h1>
-                <p class="text-base md:text-2xl mb-6">Conocé nuestra misión, visión y valores</p>
+                <h1 id="main-heading" class="text-3xl md:text-6xl font-bold mb-4">Nuestro Colegio</h1>
+                <p class="text-lg md:text-xl font-light">Comprometidos con la excelencia académica y el bienestar integral.</p>
             </div>
         </section>
+        
+        <section id="historia" class="py-16 bg-white px-4 scroll-mt-[68px]"> <div class="container mx-auto text-center max-w-6xl">
+                <h2 class="text-3xl font-bold text-primary mb-6">Historia</h2>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                Fundado en el año 1992, nuestro Colegio ha sido diseñado y construido en un entorno pensado para fomentar el 
+                aprendizaje de manera integral y con una visión de futuro. Desde sus inicios, ha acompañado el crecimiento de familias 
+                y estudiantes, consolidando una educación basada en la excelencia académica y en valores sólidos.
+                </p>
 
-        <section id="historia" class="py-16 md:py-20 px-4">
             <div class="container mx-auto">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <img src="img/arbol.jpeg" alt="Imagen de un árbol de Ginkgo Biloba, símbolo del colegio Wellspring" class="rounded-lg shadow-lg w-full">
+                            <img src="img/arbol.jpeg" alt="Imagen de un árbol de Ginkgo Biloba, símbolo del colegio Wellspring" class="rounded-lg shadow-xl w-full" loading="lazy">
                     <div>
-                        <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">Nuestro Colegio</h2>
-                        <p class="mb-3">Nuestro querido símbolo, el árbol de Ginkgo Biloba. Este árbol, único y resistente, nos recuerda nuestra Misión y Visión como Colegio. Sus cinco hojas, con forma de abanico, nos enseñan sobre los pilares que sostienen nuestra labor diaria:</p>
-                        <ul class="list-disc list-inside space-y-1 mt-4">
-                            <li>El respeto</li>
-                            <li>El compromiso y la lealtad</li>
-                            <li>La integridad y la honestidad</li>
-                            <li>La responsabilidad y la fortaleza</li>
-                            <li>La solidaridad</li>
+                        <p class="mb-3 text-left">Nuestro querido símbolo, el árbol de Ginkgo Biloba. Este árbol, único y resistente, nos recuerda nuestra Misión y Visión como Colegio. Sus cinco hojas, con forma de abanico, nos enseñan sobre los pilares que sostienen nuestra labor diaria:</p>
+                        <ul class="list-disc list-inside space-y-1 mt-4 text-left text-primary font-semibold">
+                        <li>El respeto</li>
+                        <li>El compromiso y la lealtad</li>
+                        <li>La integridad y la honestidad</li>
+                        <li>La responsabilidad y la fortaleza</li>
+                        <li>La solidaridad</li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <p class="text-gray-700 mb-12 mt-6 leading-relaxed">
+            Estos valores son los cimientos sobre los que construimos cada día la educación de nuestros alumnos y son 
+            también el motor que impulsa cada acción y decisión que tomamos como institución.
+            </p>
+
+            <div class="grid md:grid-cols-4 gap-4 mb-12">
+                <img src="img/fotohistoria1.jpg" alt="Antigua instalación del Colegio Wellspring" class="rounded-lg shadow-lg object-cover w-full h-48" loading="lazy">
+                <img src="img/fotohistoria2.jpg" alt="Grupo de alumnos en actividad educativa histórica" class="rounded-lg shadow-lg object-cover w-full h-48" loading="lazy">
+                <img src="img/fotohistoria3.jpg" alt="Evento escolar con familias y alumnos" class="rounded-lg shadow-lg object-cover w-full h-48" loading="lazy">
+                <img src="img/fotohistoria4.jpg" alt="Fachada inicial del Colegio Wellspring" class="rounded-lg shadow-lg object-cover w-full h-48" loading="lazy">
+                </div>
+
+                <div class="relative w-full overflow-hidden mb-12 group">
+                    <div id="historia-carousel" class="flex transition-transform duration-700 ease-in-out">
+                        <img src="img/fotohistoriaban.jpg" alt="Instalación Antigua colegio 1" class="w-full h-[400px] object-cover rounded-lg flex-shrink-0" loading="lazy">
+                        <img src="img/fotoban2.jpg" alt="Instalación Antigua colegio 2" class="w-full h-[400px] object-cover rounded-lg flex-shrink-0" loading="lazy">
+                        <img src="img/fotoban3.jpg" alt="Instalación Antigua colegio 3" class="w-full h-[400px] object-cover rounded-lg flex-shrink-0" loading="lazy">
+                        <img src="img/fotoban4.jpg" alt="Instalación Antigua colegio 4" class="w-full h-[400px] object-cover rounded-lg flex-shrink-0" loading="lazy">
+                    </div>
+                    <button id="historia-prev" aria-label="Anterior imagen" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-primary/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-primary z-10 shadow-lg">❮</button>
+                    <button id="historia-next" aria-label="Siguiente imagen" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-primary/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-primary z-10 shadow-lg">❯</button>
+                    
+                    <div id="historia-dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        </div>
+                </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center bg-gray-50 p-8 rounded-lg shadow-inner">
+            <div class="border-r border-gray-200 md:border-r-0">
+                <h3 class="text-4xl font-extrabold text-primary">40.000 m²</h3>
+                <p class="text-gray-600 mt-1">de campus</p>
+            </div>
+            <div class="border-r border-gray-200">
+                <h3 class="text-4xl font-extrabold text-primary">30 años</h3>
+                <p class="text-gray-600 mt-1">enseñando y acompañando</p>
+            </div>
+            <div>
+                <h3 class="text-4xl font-extrabold text-primary">+800</h3>
+                <p class="text-gray-600 mt-1">egresados</p>
+            </div>
+            </div>
+        </div>
         </section>
-    
-        <section id="mision"  class="bg-primary text-white py-12 px-4 rounded-lg">
-            <div class="container mx-auto text-center max-w-3xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-white mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
-                </svg>
-                <h2 class="text-2xl font-bold text-white mb-4">Misión</h2>
-                <p>Nuestra principal misión es brindarles a nuestros alumnos una educación integral y, principalmente, bienestar dentro de un ámbito seguro, respetuoso e inclusivo, que les dé la posibilidad de construir aprendizajes para toda la vida.</p>
+    <section id="infra" class="py-16 bg-white px-4 scroll-mt-[68px]"> 
+            <div class="container mx-auto text-center max-w-6xl">
+                <h2 class="text-3xl font-bold text-primary mb-6">Infraestructura</h2>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    Contamos con un campus de 40.000 m² diseñado para potenciar cada área del desarrollo de nuestros alumnos. Nuestras instalaciones incluyen laboratorios, estudios de arte, canchas deportivas, y amplios espacios verdes que complementan la formación académica con experiencias prácticas y creativas.
+                </p>
+
+                <div class="relative w-full overflow-hidden mb-12 group">
+                    <div id="infra-carousel" class="flex transition-transform duration-700 ease-in-out">
+                        <img src="img/infrastban1.jpg" alt="Vista exterior del colegio" class="w-full h-[400px] object-cover rounded-lg flex-shrink-0" loading="lazy">
+                        <img src="img/infrastban2.jpg" alt="Gimnasio del colegio" class="w-full h-[400px] object-cover rounded-lg flex-shrink-0" loading="lazy">
+                        <img src="img/infrastban3.jpg" alt="Laboratorio de ciencias" class="w-full h-[400px] object-cover rounded-lg flex-shrink-0" loading="lazy">
+                        <img src="img/infrastban4.jpg" alt="Área de juegos al aire libre" class="w-full h-[400px] object-cover rounded-lg flex-shrink-0" loading="lazy">
+                        <img src="img/infrastban5.jpg" alt="Biblioteca del colegio" class="w-full h-[400px] object-cover rounded-lg flex-shrink-0" loading="lazy">
+                        <img src="img/infrastban6.JPG" alt="Cancha de deportes" class="w-full h-[400px] object-cover rounded-lg flex-shrink-0" loading="lazy">
+                    </div>
+                    <button id="infra-prev" aria-label="Anterior imagen de infraestructura" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-primary/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-primary z-10 shadow-lg">❮</button>
+                    <button id="infra-next" aria-label="Siguiente imagen de infraestructura" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-primary/70 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 hover:bg-primary z-10 shadow-lg">❯</button>
+                    
+                    <div id="infra-dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-4 gap-4 mb-12">
+                    <img src="img/infraestr1corriendo.JPG" alt="Alumnos corriendo en el campo de deportes" class="rounded-lg shadow-lg object-cover w-full h-48" loading="lazy">
+                    <img src="img/infraclase2.jpg" alt="Clase de alumnos de primaria" class="rounded-lg shadow-lg object-cover w-full h-48" loading="lazy">
+                    <img src="img/infraclase3.jpg" alt="Alumnos participando en el aula" class="rounded-lg shadow-lg object-cover w-full h-48" loading="lazy">
+                    <img src="img/infraevento4.jpg" alt="Evento escolar en el patio central" class="rounded-lg shadow-lg object-cover w-full h-48" loading="lazy">
+                </div>
             </div>
         </section>
 
-        <section id="vision" class="bg-gray-50 py-12 px-4 rounded-lg">
-            <div class="container mx-auto text-center max-w-3xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-                <h2 class="text-2xl font-bold text-primary mb-4">Visión</h2>
-                <p>Wellspring es una Institución de aprendizaje privada, bilingüe, mixta. Buscamos desarrollar fuertes valores éticos para permitir que nuestros alumnos se conviertan en ciudadanos íntegros, útiles y exitosos. En Wellspring deseamos que los alumnos sean el centro de su propio proceso de aprendizaje, en un entorno en donde se sientan queridos, respetados y motivados para poder desarrollar todo su potencial. Nuestro entorno fomenta el desarrollo individual, el pensamiento independiente, el espíritu deportivo y trabajamos por una interacción extensa y cercana con y entre la Comunidad.</p>
-            </div>
-        </section>
+        <section class="py-16 px-4 bg-gray-100">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-primary mb-12">Nuestros Pilares</h2>
 
-        <section id="valores" class="bg-primary text-white py-12 px-4 rounded-lg mb-10">
-            <div class="container mx-auto text-center max-w-3xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-white mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <h2 class="text-2xl font-bold text-white mb-4">Valores</h2>
-                <p>Promover el respeto, la solidaridad y la honestidad en la convivencia diaria. Actuar con responsabilidad, compromiso y coraje, defendiendo siempre la verdad y la justicia. Fomentar el liderazgo, la empatía y el cuidado del entorno mediante el ejemplo.</p>
+                <div id="mision"  class="bg-primary text-white p-10 rounded-xl mb-10 shadow-2xl scroll-mt-[68px]"> <div class="max-w-4xl mx-auto text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-secondary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
+                        </svg>
+                        <h3 class="text-3xl font-bold text-white mb-4">Misión</h3>
+                        <p class="text-lg">Nuestra principal misión es brindarles a nuestros alumnos una educación integral y, principalmente, bienestar dentro de un ámbito seguro, respetuoso e inclusivo, que les dé la posibilidad de construir aprendizajes para toda la vida.</p>
+                    </div>
+                </div>
+
+                <div id="vision" class="bg-white p-10 rounded-xl mb-10 shadow-2xl scroll-mt-[68px]"> <div class="max-w-4xl mx-auto text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                        <h3 class="text-3xl font-bold text-primary mb-4">Visión</h3>
+                        <p class="text-lg text-gray-700">Wellspring es una Institución de aprendizaje privada, bilingüe, mixta. Buscamos desarrollar fuertes valores éticos para permitir que nuestros alumnos se conviertan en ciudadanos íntegros, útiles y exitosos. En Wellspring deseamos que los alumnos sean el centro de su propio proceso de aprendizaje, en un entorno en donde se sientan queridos, respetados y motivados para poder desarrollar todo su potencial. Nuestro entorno fomenta el desarrollo individual, el pensamiento independiente, el espíritu deportivo y trabajamos por una interacción extensa y cercana con y entre la Comunidad.</p>
+                    </div>
+                </div>
+
+                <div id="valores" class="bg-secondary text-white p-10 rounded-xl shadow-2xl scroll-mt-[68px]"> <div class="max-w-4xl mx-auto text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-white mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <h3 class="text-3xl font-bold text-white mb-4">Valores</h3>
+                        <p class="text-lg">Promover el respeto, la solidaridad y la honestidad en la convivencia diaria. Actuar con responsabilidad, compromiso y coraje, defendiendo siempre la verdad y la justicia. Fomentar el liderazgo, la empatía y el cuidado del entorno mediante el ejemplo.</p>
+                    </div>
+                </div>
             </div>
         </section>
+        
     </main>
 
-    <footer id="contacto" class="bg-gray-900 text-white py-12 mt-16">
+    <footer id="contacto" class="bg-gray-900 text-white py-12 mt-16 scroll-mt-[68px]">
         <div class="container mx-auto grid md:grid-cols-3 gap-12 px-6 items-start">
             <div>
-                <h3 class="text-xl font-bold mb-4 text-secondary text-center">Contacto</h3>
-                <address class="not-italic text-center">
-                    <p class="mb-2">📍 Dirección: Las Camelias 3883, B1669 Manuel Alberti, Provincia de Buenos Aires</p>
-                    <p class="mb-2">📞 Teléfono: <a href="tel:+541112345678" class="hover:underline">+54 11 1234-5678</a></p>
-                    <p class="mb-2">📧 Email: <a href="mailto:info@wellspring.edu.ar" class="hover:underline">info@wellspring.edu.ar</a></p>
+                <h3 class="text-xl font-bold mb-4 text-secondary text-center md:text-left">Contacto</h3>
+                <address class="not-italic text-center md:text-left">
+                    <p class="mb-2 flex items-center justify-center md:justify-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        Las Camelias 3883, B1669 Manuel Alberti, PBA
+                    </p>
+                    <p class="mb-2 flex items-center justify-center md:justify-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.006 11.006 0 007.037 7.037l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-10a2 2 0 01-2-2v-10z"/></svg>
+                        <a href="tel:+541112345678" class="hover:underline">+54 11 1234-5678</a>
+                    </p>
+                    <p class="mb-2 flex items-center justify-center md:justify-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 12h9a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        <a href="mailto:info@wellspring.edu.ar" class="hover:underline">info@wellspring.edu.ar</a>
+                    </p>
                 </address>
             </div>
 
             <div class="text-center">
                 <h3 class="text-xl font-bold mb-4 text-secondary">Ubicación</h3>
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.4121517086025!2d-58.7508083247687!3d-34.43401994915527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca1a8f6748d0d%3A0x36d9ac5c2a0b76b4!2sLas%20Camelias%203883%2C%20B1669%20Manuel%20Alberti%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1724013440000!5m2!1ses-419!2sar" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1565.41505315488!2d-58.75659858548842!3d-34.45330386926941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc99e65842c67b%3A0x608e5c3e7f91c96!2sLas%20Camelias%203883%2C%20B1669%20Manuel%20Alberti%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1678280000000!5m2!1ses-419!2sar" 
                     width="100%" 
                     height="200" 
                     style="border:0;" 
@@ -205,22 +301,22 @@
                     title="Ubicación del Colegio Wellspring en Google Maps">
                 </iframe>
                 <div class="mt-4">
-                    <a href="https://forms.gle/xxxxx" target="_blank" class="bg-secondary hover:bg-primary text-white px-6 py-2 rounded-lg shadow-md transition">
+                    <a href="https://forms.gle/xxxxx" target="_blank" class="bg-secondary hover:bg-primary text-white px-6 py-2 rounded-lg shadow-xl transition inline-block font-semibold">
                         Trabajá con nosotros
                     </a>
                 </div>
             </div>
 
-            <div class="text-center">
-                <h3 class="text-xl font-bold mb-4 text-secondary">Seguinos</h3>
-                <div class="flex justify-end space-x-4 justify-center">
-                    <a href="https://www.instagram.com/colegiowellspring" target="_blank" class="hover:text-pink-500" aria-label="Instagram del Colegio Wellspring">
+            <div class="text-center md:text-right">
+                <h3 class="text-xl font-bold mb-4 text-secondary text-center md:text-right">Seguinos</h3>
+                <div class="flex justify-center md:justify-end space-x-4">
+                    <a href="https://www.instagram.com/colegiowellspring" target="_blank" class="hover:text-pink-500 transition-colors duration-300" aria-label="Instagram del Colegio Wellspring">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.75a1 1 0 110 2 1 1 0 010-2z"/></svg>
                     </a>
-                    <a href="https://www.facebook.com/colegiowellspring" target="_blank" class="hover:text-blue-500" aria-label="Facebook del Colegio Wellspring">
+                    <a href="https://www.facebook.com/colegiowellspring" target="_blank" class="hover:text-blue-500 transition-colors duration-300" aria-label="Facebook del Colegio Wellspring">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M13 3h4a1 1 0 011 1v4a1 1 0 01-1 1h-3v2h3a1 1 0 01.96 1.27l-1 4a1 1 0 01-.96.73H14v7a1 1 0 01-1 1h-4a1 1 0 01-1-1v-7H6a1 1 0 01-1-1V9a1 1 0 011-1h3V6a3 3 0 013-3z"/></svg>
                     </a>
-                    <a href="https://youtube.com/" target="_blank" class="hover:text-red-500" aria-label="Canal de YouTube del Colegio Wellspring">
+                    <a href="https://youtube.com/" target="_blank" class="hover:text-red-500 transition-colors duration-300" aria-label="Canal de YouTube del Colegio Wellspring">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184A3.999 3.999 0 0122 7.135v9.73a3.999 3.999 0 01-2.385 3.951c-1.49.595-7.646.595-7.646.595s-6.156 0-7.646-.595A3.999 3.999 0 012 16.865v-9.73a3.999 3.999 0 012.385-3.951C5.875 2.54 12.031 2.54 12.031 2.54s6.156 0 7.646.595zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
                     </a>
                 </div>
@@ -229,10 +325,10 @@
         
         <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-400">
             <p>© 2025 Wellspring. Todos los derechos reservados.</p>
-            <p>By SCrem</p>
+            <p>Diseño & Desarrollo por SCrem</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script> 
 </body>
 </html>

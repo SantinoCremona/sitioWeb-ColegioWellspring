@@ -1,0 +1,52 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+header img {
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fadeInDown {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fadeIn.delay-100 {
+    animation-delay: 0.2s;
+}
+
+.animate-fadeInDown, .animate-fadeIn {
+    opacity: 0;
+}
+
+#historia-carousel, #infra-carousel {
+    display: flex;
+    will-change: transform; 
+}
+
+#historia-carousel img, #infra-carousel img {
+    flex-shrink: 0; 
+    width: 100%;
+}
