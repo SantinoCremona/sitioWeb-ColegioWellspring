@@ -1,19 +1,344 @@
+/* ====================================
+   Variables y Configuración Base
+   ==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+   
+:root {
+    --color-primary: #1d3062;
+    --color-secondary: #018da9;
+    --color-gray-800: #9c9b9b;
+    --color-gray-900: #1a202c;
+    --color-gray-50: #f7fafc;
+    --color-white: #fff;
+    --header-height: 68px; 
+}
 
-html {
+html, body {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
 }
-
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-
-header img {
-    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+.page-body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 
+/* Compensación de scroll para anclas */
+[data-scroll-mt] {
+    scroll-margin-top: var(--header-height);
+}
+
+
+/* ====================================
+   Header y Navegación
+   ==================================== */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+.main-header.scrolled {
+    background-color: var(--color-primary); /* Fondo sólido primary */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra más fuerte al bajar */
+}
+
+
+
+.header-container {
+    max-width: 1280px; /* mx-auto */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; /* p-4 */
+}
+
+.logo-link {
+    flex-shrink: 0;
+}
+
+.logo {
+    height: 2.5rem; /* h-10 */
+}
+
+/* Escritorio Nav */
+.desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 1rem; /* space-x-4 */
+    color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: flex;
+    }
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; /* space-x-1 */
+    transition: color 0.3s;
+    color: var(--color-white); 
+    text-decoration: none;
+}
+
+.nav-link:hover, .home-icon-link:hover .home-icon {
+    color: var(--color-secondary);
+}
+
+.home-icon, .dropdown-icon {
+    width: 1.25rem; /* h-5, w-5 */
+    height: 1.25rem;
+    stroke: currentColor;
+    fill: none;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: relative;
+    /* Usamos JavaScript para el hover y el display */
+}
+
+.dropdown-submenu {
+    position: absolute;
+    left: 0;
+    margin-top: 0.5rem;
+    width: 14rem; /* w-56 */
+    background-color: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    display: none;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 50;
+    color: var(--color-gray-800);
+}
+
+/* El Javascript de tu proyecto debe manejar el toggle de 'hidden' */
+/* .dropdown-menu:hover .dropdown-submenu { display: block; } */
+
+.submenu-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s;
+}
+
+.submenu-link:hover {
+    background-color: var(--color-gray-50);
+}
+
+/* ====================================================================
+   Mobile Nav: Base, Componentes y Estilo Consolidado (MODERNO LIMPIO)
+   ==================================================================== */
+
+/* Ocultamiento y Visualización Esencial */
+.hidden {
+    display: none !important; 
+}
+
+/* Base del Botón/Toggle de Hamburguesa */
+.menu-toggle-btn {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.menu-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-white);
+}
+.menu-icon-close {
+    display: none; /* Controlado por JS */
+}
+
+@media (min-width: 768px) {
+    .menu-toggle-btn {
+        display: none;
+    }
+}
+
+
+/* Contenedor Principal del Menú Móvil (#mobile-menu) */
+.mobile-nav-menu {
+    /* Estilo Moderno: Fondo Primario, ocupando la pantalla */
+    background-color: var(--color-primary); 
+    color: var(--color-white); 
+    border-top: 1px solid var(--color-secondary);
+    
+    display: block; /* Debe ser 'block' cuando no tiene 'hidden' */
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: var(--header-height);
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    z-index: 40;
+}
+
+@media (min-width: 768px) {
+    .mobile-nav-menu {
+        display: none !important; /* Forzar ocultamiento en desktop */
+    }
+}
+
+/* Estilo de Ítems Principales (Botones y Enlaces como 'Departamentos') */
+.mobile-nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    background: none; 
+    border: 0;
+    color: var(--color-white); 
+    padding: 1rem 1.5rem; 
+    font-weight: 600; /* Letra más gruesa */
+    font-size: 0.8rem; /* Letra más grande */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea divisoria blanca sutil */
+    box-sizing: border-box;
+    text-decoration: none; 
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.mobile-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Resaltado sutil */
+    color: var(--color-secondary); /* Resaltar texto con color secundario */
+}
+
+/* Estilo del texto dentro del enlace o botón */
+.mobile-nav-link span {
+    text-transform: uppercase;
+}
+
+/* Flechas de los ítems Toggle */
+.mobile-arrow-icon {
+    height: 1.25rem;
+    width: 1.25rem;
+    stroke: var(--color-white); 
+    transition: transform 0.3s;
+}
+
+/* Rotación de la flecha al desplegarse (controlado por JS vía aria-expanded) */
+.mobile-nav-link[aria-expanded="true"] .mobile-arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Submenú Desplegable */
+.mobile-submenu {
+    background-color: #2c3e50; /* Fondo gris oscuro, ligeramente diferente al primary */
+    padding: 0.5rem 0; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    color: var(--color-white); 
+    }
+
+.mobile-submenu-link {
+    display: block;
+    padding: 0.75rem 2.5rem; /* Indentación y padding generoso */
+    font-size: 1rem;
+    font-weight: 400; 
+    color: var(--color-white);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.mobile-submenu-link:hover {
+    background-color: var(--color-secondary); 
+    color: var(--color-white);
+}
+
+/* Reglas de Desktop que se mantuvieron */
+.desktop-nav {
+    display: none; 
+}
+
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: flex;
+    }
+}
+
+/* Ocultar el texto 'span' de los enlaces directos si no tienen flecha (simplificación) */
+/* (Depende del HTML, pero si tienes elementos sin flecha, aplica estilos directos) */
+/* ====================================
+   Main Content - Secciones
+   ==================================== */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    padding: 0 1rem;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: 2.25rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3.75rem; /* md:text-6xl */
+    }
+}
+
+.hero-subtitle {
+    font-size: 1rem; /* text-base */
+    margin-bottom: 1.25rem;
+}
+@media (min-width: 768px) {
+    .hero-subtitle {
+        font-size: 1.5rem; /* md:text-2xl */
+    }
+}
+
+.hero-subtext {
+    font-size: 1rem; /* text-base */
+    margin-bottom: 2.25rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+@media (min-width: 768px) {
+    .hero-subtext {
+        font-size: 1.25rem; /* md:text-xl */
+    }
+}
+
+/* Animaciones del Hero */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -25,28 +350,340 @@ header img {
     }
 }
 
-.animate-fadeIn {
+.animate-fadeIn, .animate-fadeInDown {
     animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0; /* Asegura que comienza oculto */
 }
 
 .animate-fadeInDown {
-    animation: fadeIn 1s ease-out forwards;
+    animation-duration: 1s;
 }
 
-.animate-fadeIn.delay-100 {
+.delay-100 {
     animation-delay: 0.2s;
 }
 
-.animate-fadeInDown, .animate-fadeIn {
-    opacity: 0;
+/* Contenedores de Sección */
+.section-admisiones {
+    padding: 3rem 1rem; /* py-12 px-4 */
+    text-align: center;
+    background-color: var(--color-gray-50);
+}
+.section-quienes, .section-instagram {
+    padding: 4rem 1rem; /* py-16 px-4 */
+    background-color: var(--color-white);
+}
+.section-niveles {
+    padding: 4rem 1rem;
+    background-color: #f3f4f6; /* bg-gray-100 */
 }
 
-#historia-carousel, #infra-carousel {
-    display: flex;
-    will-change: transform; 
+.section-content {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
-#historia-carousel img, #infra-carousel img {
-    flex-shrink: 0; 
+.section-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2.25rem; /* md:text-4xl */
+    }
+}
+
+.section-text-center {
+    max-width: 56rem; /* max-w-4xl */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem; /* text-lg */
+    line-height: 1.625; /* leading-relaxed */
+    color: var(--color-gray-900);
+}
+
+.section-info-text {
+    max-width: 80rem; /* max-w-6xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2.5rem; /* py-10 */
+    padding-bottom: 2.5rem;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.625;
+    color: var(--color-gray-900);
+}
+
+/* Botones y CTA */
+.cta-button-admisiones {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 9999px; /* rounded-full */
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.cta-button-admisiones:hover {
+    background-color: var(--color-primary);
+    transform: scale(1.05);
+}
+
+.cta-button-primary {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+.cta-button-primary:hover {
+    background-color: var(--color-primary);
+}
+
+
+/* Cards (Niveles Educativos) - AJUSTADO AL DISEÑO DE LA IMAGEN */
+.card-grid {
+    display: grid;
+    gap: 1.5rem; /* Espacio más estrecho */
+    text-align: center; /* Alineamos el contenido del grid al centro */
+}
+@media (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.level-card {
+    background-color: var(--color-white);
+    padding: 0; 
+    border-radius: 0.5rem; /* Bordes suaves generales para la tarjeta */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    overflow: hidden; /* Muy importante para contener la imagen */
+    transition: all 0.3s;
+}
+
+.card-image {
     width: 100%;
+    height: 22rem; 
+    object-fit: cover;
+    border-radius: 0; 
+    margin-bottom: 0;
+    display: block; /* Asegura que no haya espacio extra debajo de la imagen */
+}
+
+.object-focus-top-mid {
+    object-position: center 25%;
+}
+
+.object-focus-top-cen {
+    object-position: center 32%;
+}
+
+.card-title-band {
+    position: relative;
+    padding: 1rem 0; /* Espacio arriba y abajo del título */
+    background-color: #20b2aa; /* Color azul/verdoso sólido de la imagen (Light Sea Green) */
+    text-align: center;
+}
+
+.card-title {
+    /* Estilo del título que va dentro de la banda de color */
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-white); 
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em; /* Espaciado sutil para títulos */
+}
+.card-title:hover {
+   color: #1a202c;
+}
+
+.card-button {
+    text-decoration: none;
+}
+.card-button:hover {
+    background-color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Instagram */
+.instagram-embed-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.instagram-iframe {
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.instagram-caption {
+    margin-top: 1.5rem;
+    color: var(--color-gray-800);
+}
+.dropdown-menu:hover .dropdown-submenu {
+    display: block; 
+}
+
+.submenu-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    color: var(--color-gray-900);
+}
+
+.dropdown-submenu {
+    display: none; 
+}
+/* ====================================
+   Footer
+   ==================================== */
+
+.main-footer {
+    background-color: var(--color-gray-900);
+    color: var(--color-white);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    gap: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    align-items: flex-start;
+}
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .footer-title:not(.footer-column-center .footer-title) {
+        text-align: left;
+    }
+}
+
+.footer-address {
+    font-style: normal;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+@media (min-width: 768px) {
+    .footer-address {
+        text-align: left;
+    }
+}
+
+.footer-text {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .footer-text {
+        justify-content: flex-start;
+    }
+}
+
+.footer-link {
+    margin-left: 2px;
+    transition: text-decoration 0.2s;
+    text-decoration: none;
+    color: #f7fafc;
+}
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-column-center {
+    text-align: center;
+}
+
+.map-iframe {
+    width: 100%;
+    height: 12.5rem; /* h-52 */
+    border: 0;
+}
+
+.footer-cta-wrapper {
+    margin-top: 1rem;
+}
+
+.cta-button-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    font-weight: 600;
+    display: inline-block;
+}
+.cta-button-secondary:hover {
+    background-color: var(--color-primary);
+}
+
+.footer-column-right {
+    text-align: right;
+}
+@media (min-width: 768px) {
+    .footer-column-right {
+        text-align: right;
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .social-links {
+        justify-content: flex-end;
+    }
+}
+
+.social-icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    transition: color 0.3s;
+}
+
+.social-link:nth-child(1):hover { color: #ec4899; } /* Pink for Instagram */
+.social-link:nth-child(2):hover { color: #3b82f6; } /* Blue for Facebook */
+.social-link:nth-child(3):hover { color: #ef4444; } /* Red for YouTube */
+
+.footer-copyright {
+    border-top: 1px solid rgba(107, 114, 128, 0.5); /* border-gray-700 */
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: rgba(156, 163, 175, 1); /* text-gray-400 */
 }

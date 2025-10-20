@@ -20,181 +20,178 @@
     <meta name="twitter:description" content="Educación desde Jardín hasta Secundaria con valores, arte, deporte e innovación.">
     <meta name="twitter:image" content="img/logo-wellspring.png">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#004B87', // Azul oscuro
-                        secondary: '#1E90FF', // Azul vivo
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
-<body> 
-    <header class="fixed w-full z-50 shadow bg-gray-900/70 backdrop-blur-sm top-0">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="index.html" class="flex-shrink-0">
-                <img src="img/logo Wellspring School.png" alt="Logo del Colegio Wellspring" class="h-10">
+<body class="page-body"> 
+    <header class="main-header" id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo Wellspring School.png" alt="Logo del Colegio Wellspring" class="logo">
             </a>
             
-            <nav id="desktop-nav" class="hidden md:flex space-x-4 text-white">
-                <a href="index.html" class="hover:text-secondary flex items-center space-x-1" aria-label="Ir a la página de inicio">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-current" fill="none" viewBox="0 0 24 24">
+            <nav id="desktop-nav" class="desktop-nav">
+                <a href="index.html" class="nav-link home-icon-link" aria-label="Ir a la página de inicio">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="home-icon" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9.75L12 4l9 5.75V20a1 1 0 01-1 1h-6v-6H10v6H4a1 1 0 01-1-1V9.75z" />
                     </svg>
                 </a>
                 
-                <div class="relative group">
-                    <a href="quienes-somos.html" class="hover:text-secondary flex items-center space-x-1" aria-expanded="false" aria-controls="qs-submenu-desktop"> 
+                <div class="dropdown-menu">
+                    <a href="quienes-somos.html" class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="qs-submenu-desktop"> 
                         <span>¿Quiénes Somos?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-current transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" fill="none" viewBox="0 0 24 24"> 
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </a>
-                    <div id="qs-submenu-desktop" class="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg hidden group-hover:block text-gray-800 transition duration-300 z-50">
-                        <a href="quienes-somos.html#historia" class="block px-4 py-2 hover:bg-gray-100">Nuestro Colegio</a> 
-                        <a href="quienes-somos.html#mision" class="block px-4 py-2 hover:bg-gray-100">Misión</a>
-                        <a href="quienes-somos.html#vision" class="block px-4 py-2 hover:bg-gray-100">Visión</a>
-                        <a href="quienes-somos.html#valores" class="block px-4 py-2 hover:bg-gray-100">Valores</a>
+                    <div id="qs-submenu-desktop" class="dropdown-submenu">
+                        <a href="quienes-somos.html#historia" class="submenu-link">Nuestro Colegio</a> 
+                        <a href="quienes-somos.html#mision" class="submenu-link">Misión</a>
+                        <a href="quienes-somos.html#vision" class="submenu-link">Visión</a>
+                        <a href="quienes-somos.html#valores" class="submenu-link">Valores</a>
                     </div>
                 </div>
 
-                <div class="relative group">
-                    <a href="#niveles" class="hover:text-secondary flex items-center space-x-1" aria-expanded="false" aria-controls="niveles-submenu-desktop">
+                <div class="dropdown-menu">
+                    <a href="#niveles" class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="niveles-submenu-desktop">
                         <span>Académico</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 stroke-current transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" fill="none" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </a>
-                    <div id="niveles-submenu-desktop" class="absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg hidden group-hover:block text-gray-800 transition duration-300 z-50">
-                        <a href="jardin.html" class="block px-4 py-2 hover:bg-gray-100">Kinder</a>
-                        <a href="primaria.html" class="block px-4 py-2 hover:bg-gray-100">Primaria</a>
-                        <a href="secundaria.html" class="block px-4 py-2 hover:bg-gray-100">Secundaria</a>
-                        <a href="becas.html" class="block px-4 py-2 hover:bg-gray-100">Exámenes, Becas y Convenios</a>
+                    <div id="niveles-submenu-desktop" class="dropdown-submenu">
+                        <a href="jardin.html" class="submenu-link">Kinder</a>
+                        <a href="primaria.html" class="submenu-link">Primaria</a>
+                        <a href="secundaria.html" class="submenu-link">Secundaria</a>
+                        <a href="becas.html" class="submenu-link">Exámenes y Viajes</a>
                     </div>
                 </div>
 
-                <a href="dptos.html" class="hover:text-secondary">Departamentos</a>
-                <a href="#contacto" class="hover:text-secondary">Contacto</a>
+                <a href="dptos.html" class="nav-link">Departamentos</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
             </nav>
 
-            <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
-                <svg id="icon-open" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <button id="menu-btn" class="menu-toggle-btn" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
+                <svg id="icon-open" class="menu-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                <svg id="icon-close" class="w-6 h-6 text-white hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <svg id="icon-close" class="menu-icon menu-icon-close" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
           
-        <nav id="mobile-menu" class="hidden md:hidden bg-white border-t text-gray-800 transition-all duration-300 ease-in-out">
-            
-            <a href="quienes-somos.html" class="w-full text-left px-4 py-3 hover:bg-gray-100 flex justify-between items-center font-semibold border-b">
+        <nav id="mobile-menu" class="mobile-nav-menu hidden">
+    
+            <button id="qs-btn" class="mobile-nav-link menu-toggle-button" aria-expanded="false" aria-controls="qs-submenu">
                 <span>¿Quiénes Somos?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
-            </a>
-            <div id="qs-submenu" class="bg-gray-50 border-b">
-                <a href="quienes-somos.html#historia" class="block px-6 py-2 hover:bg-gray-100 text-sm">Nuestro Colegio</a>
-                <a href="quienes-somos.html#mision" class="block px-6 py-2 hover:bg-gray-100 text-sm">Misión</a>
-                <a href="quienes-somos.html#vision" class="block px-6 py-2 hover:bg-gray-100 text-sm">Visión</a>
-                <a href="quienes-somos.html#valores" class="block px-6 py-2 hover:bg-gray-100 text-sm">Valores</a>
+            </button>
+            <div id="qs-submenu" class="mobile-submenu hidden"> 
+                <a href="quienes-somos.html#historia" class="mobile-submenu-link">Nuestro Colegio</a>
+                <a href="quienes-somos.html#mision" class="mobile-submenu-link">Misión</a>
+                <a href="quienes-somos.html#vision" class="mobile-submenu-link">Visión</a>
+                <a href="quienes-somos.html#valores" class="mobile-submenu-link">Valores</a>
             </div>
 
-            <a href="#" class="w-full text-left px-4 py-3 hover:bg-gray-100 flex justify-between items-center font-semibold border-b">
+            <button id="niveles-btn" class="mobile-nav-link menu-toggle-button" aria-expanded="false" aria-controls="niveles-submenu">
                 <span>Académico</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
-            </a>
-            <div id="niveles-submenu" class="bg-gray-50 border-b">
-                <a href="jardin.html" class="block px-6 py-2 hover:bg-gray-100 text-sm">Kinder</a>
-                <a href="primaria.html" class="block px-6 py-2 hover:bg-gray-100 text-sm">Primaria</a>
-                <a href="secundaria.html" class="block px-6 py-2 hover:bg-gray-100 text-sm">Secundaria</a>
-                <a href="becas.html" class="block px-6 py-2 hover:bg-gray-100 text-sm">Exámenes, Becas y Convenios</a>
+            </button>
+            <div id="niveles-submenu" class="mobile-submenu hidden">
+                <a href="jardin.html" class="mobile-submenu-link">Kinder</a>
+                <a href="primaria.html" class="mobile-submenu-link">Primaria</a>
+                <a href="secundaria.html" class="mobile-submenu-link">Secundaria</a>
+                <a href="becas.html" class="mobile-submenu-link">Exámenes y Viajes</a>
             </div>
-
-            <a href="dptos.html" class="block px-4 py-3 hover:bg-gray-100 font-semibold border-b">Departamentos</a>
-            <a href="#contacto" class="block px-4 py-3 hover:bg-gray-100 font-semibold">Contacto</a>
+            <a href="dptos.html" class="mobile-nav-link">
+                <span>Departamentos</span>
+            </a>
+            
+            <a href="#contacto" class="mobile-nav-link">
+                <span>Contacto</span>
+            </a>
         </nav>
     </header>
 
     <main>
-        <section id="inicio" class="relative h-screen flex items-center justify-center text-center text-white px-4">
-            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+        <section id="inicio" class="hero-section">
+            <video autoplay muted loop playsinline class="hero-video">
                 <source src="videos/video_web_final.mp4" type="video/mp4">
                 <p aria-label="Video de bienvenida mostrando instalaciones y alumnos del colegio.">Tu navegador no soporta video en HTML5.</p>
             </video>
 
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div> <div class="relative p-6 md:p-8 rounded-lg z-10">
-                <h1 id="main-heading" class="text-3xl md:text-6xl font-bold mt-2 mb-4 animate-fadeInDown">Welcome to Wellspring</h1>
-                <p class="text-base md:text-2xl mb-5 animate-fadeIn">Tu aprendizaje, tu camino, nuestro compromiso.</p>
-                <p class="text-base md:text-xl mb-9 italic opacity-90 animate-fadeIn delay-100">Your learning, your path, our commitment.</p>
+            <div class="hero-overlay"></div> 
+            <div class="hero-content">
+                <h1 id="main-heading" class="hero-title animate-fadeInDown">Welcome to Wellspring</h1>
+                <p class="hero-subtitle animate-fadeIn">Tu aprendizaje, tu camino, nuestro compromiso.</p>
+                <p class="hero-subtext animate-fadeIn delay-100">Your learning, your path, our commitment.</p>
             </div>
         </section>
         
-        <section id="admisiones" class="py-12 px-4 text-center bg-gray-50 scroll-mt-[68px]"> <div class="container mx-auto">
-                <h2 class="text-2xl font-bold text-primary mb-6">Proceso de Admisión Abierto</h2>
-                <a href="https://forms.gle/xxxxx" target="_blank" class="inline-block bg-secondary hover:bg-primary text-white font-bold py-3 px-8 shadow-xl rounded-full transition-colors duration-300 transform hover:scale-105">
+        <section id="admisiones" class="section-admisiones" data-scroll-mt> 
+            <div class="container mx-auto">
+                <h2 class="section-title text-center">Proceso de Admisión Abierto</h2>
+                <a href="https://forms.gle/xxxxx" target="_blank" class="cta-button-admisiones">
                     Sumáte a Nuestra Comunidad!
                 </a>
             </div>
         </section>
 
 
-        <section id="quienes" class="py-16 bg-white px-4 scroll-mt-[68px]"> <div class="container mx-auto text-center max-w-5xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">NUESTRO COLEGIO</h2>
-                <p class="max-w-4xl mx-auto text-lg leading-relaxed text-gray-700">
+        <section id="quienes" class="section-quienes" data-scroll-mt> 
+            <div class="container mx-auto section-content">
+                <h2 class="section-title">NUESTRO COLEGIO</h2>
+                <p class="section-text-center">
                     Desde 1992 ofrecemos una educación bilingüe, personalizada y de alto nivel académico en un entorno natural y familiar que acompaña el desarrollo integral de cada alumno. Formamos ciudadanos íntegros, críticos y comprometidos con el mundo.
                 </p>
-                <a href="quienes-somos.html" class="mt-8 inline-block bg-secondary text-white px-6 py-3 rounded-lg hover:bg-primary transition duration-300 font-semibold shadow-md">
+                <a href="quienes-somos.html" class="cta-button-primary">
                     Conoce más sobre nuestra historia, misión y visión
                 </a>
             </div>
         </section>
 
-        <section id="niveles" class="py-16 bg-gray-100 px-4 scroll-mt-[68px]"> <div class="container mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-10">Niveles Educativos</h2>
-                <div class="grid md:grid-cols-3 gap-8">
+        <section id="niveles" class="section-niveles" data-scroll-mt> 
+            <div class="container mx-auto section-content">
+                <h2 class="section-title">Niveles Educativos</h2>
+               <div class="card-grid">
+    
+                    <article class="level-card">
+                        <img src="img/Kinder.jpg" alt="Niños jugando en el jardín de infantes" class="card-image object-focus-top-mid " loading="lazy">
+                        <div class="card-title-band">
+                            <a href="jardin.html" class="card-button"><h3 class="card-title">KINDER</h3></a>
+                        </div>
+                        </article>
                     
-                    <article class="bg-white p-6 rounded-xl shadow-2xl hover:shadow-primary/50 transition duration-300 transform hover:scale-[1.02]">
-                        <img src="img/Kinder.jpg" alt="Niños jugando en el jardín de infantes" class="w-full h-64 object-cover rounded-lg mb-4" loading="lazy">
-                        <h3 class="text-2xl font-bold text-primary mb-3">Kinder</h3>
-                        <p class="text-gray-600 mb-4">Aprendizaje lúdico y bilingüe para los primeros pasos.</p>
-                        <a href="jardin.html" class="inline-block bg-secondary text-white px-5 py-2 rounded-full hover:bg-primary transition font-medium">Ver más</a>
+                    <article class="level-card">
+                        <img src="img/Primaria.jpg" alt="Estudiantes de primaria en un aula" class="card-image object-focus-top-mid" loading="lazy">
+                        <div class="card-title-band">
+                            <a href="primaria.html" class="card-button"><h3 class="card-title">Primaria</h3></a>
+                        </div>
                     </article>
                     
-                    <article class="bg-white p-6 rounded-xl shadow-2xl hover:shadow-primary/50 transition duration-300 transform hover:scale-[1.02]">
-                        <img src="img/Primaria.jpg" alt="Estudiantes de primaria en un aula" class="w-full h-64 object-cover rounded-lg mb-4" loading="lazy">
-                        <h3 class="text-2xl font-bold text-primary mb-3">Primaria</h3>
-                        <p class="text-gray-600 mb-4">Desarrollo de competencias con foco en el pensamiento crítico.</p>
-                        <a href="primaria.html" class="inline-block bg-secondary text-white px-5 py-2 rounded-full hover:bg-primary transition font-medium">Ver más</a>
+                    <article class="level-card">
+                        <img src="img/Secundaria.jpg" alt="Estudiantes de secundaria en clase de ciencias" class="card-image" loading="lazy">
+                        <div class="card-title-band">
+                             <a href="secundaria.html" class="card-button"><h3 class="card-title">Secundaria</h3></a>
+                        </div>
                     </article>
-                    
-                    <article class="bg-white p-6 rounded-xl shadow-2xl hover:shadow-primary/50 transition duration-300 transform hover:scale-[1.02]">
-                        <img src="img/Secundaria.jpg" alt="Estudiantes de secundaria en clase de ciencias" class="w-full h-64 object-cover rounded-lg mb-4" loading="lazy">
-                        <h3 class="text-2xl font-bold text-primary mb-3">Secundaria</h3>
-                        <p class="text-gray-600 mb-4">Preparación universitaria y formación de líderes íntegros.</p>
-                        <a href="secundaria.html" class="inline-block bg-secondary text-white px-5 py-2 rounded-full hover:bg-primary transition font-medium">Ver más</a>
-                    </article>
-                </div>
+    
+</div>
 
-                <p class="max-w-6xl mx-auto py-10 text-center text-lg leading-relaxed text-gray-700">
+                <p class="section-info-text">
                     Nuestra propuesta combina formación académica, enseñanza bilingüe, acompañanmiento personalizado y una sólida educación en valores. Está diseñada para potenciar las capacidades de cada alumno, integrando áreas académicas, tecnológicas, deportivas, artísticas y de formación en valores. Este enfoque integral busca formar estudiantes autónomos, críticos y comprometidos con su entorno.
                 </p>
             </div>
         </section>
 
-        <section id="instagram" class="py-16 bg-white px-4 scroll-mt-[68px]"> <div class="container mx-auto text-center max-w-5xl">    
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8">Novedades y Comunidad</h2>
-                <div class="w-full flex justify-center">
+        <section id="instagram" class="section-instagram" data-scroll-mt> 
+            <div class="container mx-auto section-content">    
+                <h2 class="section-title">Novedades y Comunidad</h2>
+                <div class="instagram-embed-wrapper">
                     <iframe 
                         src="https://www.instagram.com/colegiowellspring/embed"
                         width="100%" height="600"
@@ -202,38 +199,28 @@
                         scrolling="no"
                         allowtransparency="true"
                         title="Feed de Instagram de Colegio Wellspring"
-                        class="rounded-xl shadow-2xl" 
+                        class="instagram-iframe" 
                         loading="lazy">
                     </iframe>
                 </div>
-                <p class="mt-6 text-gray-600">Seguinos para ver el día a día de nuestro colegio.</p>
             </div>
         </section>
         
     </main>
 
-    <footer id="contacto" class="bg-gray-900 text-white py-12 mt-16 scroll-mt-[68px]">
-        <div class="container mx-auto grid md:grid-cols-3 gap-12 px-6 items-start">
+    <footer id="contacto" class="main-footer" data-scroll-mt>
+        <div class="footer-container">
             <div>
-                <h3 class="text-xl font-bold mb-4 text-secondary text-center md:text-left">Contacto</h3>
-                <address class="not-italic text-center md:text-left space-y-2 text-sm">
-                    <p class="flex items-center justify-center md:justify-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                        Las Camelias 3883, B1669 Manuel Alberti, PBA
-                    </p>
-                    <p class="flex items-center justify-center md:justify-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.006 11.006 0 007.037 7.037l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-10a2 2 0 01-2-2v-10z"/></svg>
-                        <a href="tel:+541112345678" class="hover:underline">+54 11 1234-5678</a>
-                    </p>
-                    <p class="flex items-center justify-center md:justify-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 12h9a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                        <a href="mailto:info@wellspring.edu.ar" class="hover:underline">info@wellspring.edu.ar</a>
-                    </p>
+                <h3 class="footer-title">Contacto</h3>
+                <address class="footer-address">
+                    <p class="footer-text">📍 Dirección: Las Camelias 3883, B1669 Manuel Alberti, Provincia de Buenos Aires</p>
+                    <p class="footer-text">📞 Teléfono: <a href="tel:+541112345678" class="footer-link">+54 11 1234-5678</a></p>
+                    <p class="footer-text">📧 Email: <a href="mailto:info@wellspring.edu.ar" class="footer-link">info@wellspring.edu.ar</a></p>
                 </address>
             </div>
 
-            <div class="text-center">
-                <h3 class="text-xl font-bold mb-4 text-secondary">Ubicación</h3>
+            <div class="footer-column-center">
+                <h3 class="footer-title">Ubicación</h3>
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578.43285750278!2d-58.83401569429447!3d-34.42588371350831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9e5c4a5c0d1d%3A0x1d3a4b6c3d8e9a2d!2sLas%20Camelias%203883%2C%20B1669%20Manuel%20Alberti%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" 
                     width="100%" 
@@ -242,32 +229,33 @@
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade"
-                    title="Ubicación del Colegio Wellspring en Google Maps">
+                    title="Ubicación del Colegio Wellspring en Google Maps"
+                    class="map-iframe">
                 </iframe>
-                <div class="mt-4">
-                    <a href="https://forms.gle/xxxxx" target="_blank" class="bg-secondary hover:bg-primary text-white px-6 py-2 rounded-lg shadow-xl transition inline-block font-semibold">
+                <div class="footer-cta-wrapper">
+                    <a href="https://forms.gle/xxxxx" target="_blank" class="cta-button-secondary">
                         Trabajá con nosotros
                     </a>
                 </div>
             </div>
 
-            <div class="text-center md:text-right">
-                <h3 class="text-xl font-bold mb-4 text-secondary text-center md:text-right">Seguinos</h3>
-                <div class="flex justify-center md:justify-end space-x-4">
-                    <a href="https://www.instagram.com/colegiowellspring" target="_blank" class="hover:text-pink-500 transition-colors duration-300" aria-label="Instagram del Colegio Wellspring">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.75a1 1 0 110 2 1 1 0 010-2z"/></svg>
+            <div class="footer-column-right">
+                <h3 class="footer-title">Seguinos</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/colegiowellspring" target="_blank" class="social-link" aria-label="Instagram del Colegio Wellspring">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.75a1 1 0 110 2 1 1 0 010-2z"/></svg>
                     </a>
-                    <a href="https://www.facebook.com/colegiowellspring" target="_blank" class="hover:text-blue-500 transition-colors duration-300" aria-label="Facebook del Colegio Wellspring">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M13 3h4a1 1 0 011 1v4a1 1 0 01-1 1h-3v2h3a1 1 0 01.96 1.27l-1 4a1 1 0 01-.96.73H14v7a1 1 0 01-1 1h-4a1 1 0 01-1-1v-7H6a1 1 0 01-1-1V9a1 1 0 011-1h3V6a3 3 0 013-3z"/></svg>
+                    <a href="https://www.facebook.com/colegiowellspring" target="_blank" class="social-link" aria-label="Facebook del Colegio Wellspring">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M13 3h4a1 1 0 011 1v4a1 1 0 01-1 1h-3v2h3a1 1 0 01.96 1.27l-1 4a1 1 0 01-.96.73H14v7a1 1 0 01-1 1h-4a1 1 0 01-1-1v-7H6a1 1 0 01-1-1V9a1 1 0 011-1h3V6a3 3 0 013-3z"/></svg>
                     </a>
-                    <a href="https://youtube.com/" target="_blank" class="hover:text-red-500 transition-colors duration-300" aria-label="Canal de YouTube del Colegio Wellspring">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184A3.999 3.999 0 0122 7.135v9.73a3.999 3.999 0 01-2.385 3.951c-1.49.595-7.646.595-7.646.595s-6.156 0-7.646-.595A3.999 3.999 0 012 16.865v-9.73a3.999 3.999 0 012.385-3.951C5.875 2.54 12.031 2.54 12.031 2.54s6.156 0 7.646.595zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
+                    <a href="https://www.linkedin.com/company/wellspring-school/" target="_blank" class="social-link" aria-label="Canal de Linkedin del Colegio Wellspring">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184A3.999 3.999 0 0122 7.135v9.73a3.999 3.999 0 01-2.385 3.951c-1.49.595-7.646.595-7.646.595s-6.156 0-7.646-.595A3.999 3.999 0 012 16.865v-9.73a3.999 3.999 0 012.385-3.951C5.875 2.54 12.031 2.54 12.031 2.54s6.156 0 7.646.595zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-400">
+        <div class="footer-copyright">
             <p>© 2025 Wellspring. Todos los derechos reservados.</p>
             <p>Diseño & Desarrollo por SCrem</p>
         </div>

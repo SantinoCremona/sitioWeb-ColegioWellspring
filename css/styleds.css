@@ -1,0 +1,240 @@
+/* ====================================
+   Main Content - Secciones de la página dptos.html
+   ==================================== */
+
+.hero-overlay-page {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Opacidad media */
+}
+.content-wrapper {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* Consistencia: py-16 y space-y-20 */
+    padding-top: 4rem; 
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.section-departamento {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .section-departamento {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Reglas para la alternancia de imagen/texto */
+.dpto-odd {
+    /* Por defecto: Imagen a la derecha */
+}
+
+.dpto-even {
+    /* Imagen a la izquierda en escritorio */
+}
+.dpto-even .dpto-image {
+    order: 2; /* Imagen va al final */
+}
+.dpto-even .dpto-text-content {
+    order: 1; /* Texto va al inicio */
+}
+@media (min-width: 768px) {
+    .dpto-even .dpto-image {
+        order: 1; /* Imagen va al inicio */
+    }
+    .dpto-even .dpto-text-content {
+        order: 2; /* Texto va al final */
+    }
+}
+
+
+.dpto-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dpto-text-p {
+    font-size: 1.1rem; /* text-lg */
+    color: var(--color-gray-900);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.dpto-image {
+    width: 100%;
+    height: 20rem; /* h-80 */
+    object-fit: cover;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
+}
+
+/* Estilos de la Hero Section específica de la página */
+.page-section-hero {
+    height: 24rem; /* h-96 */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+    .page-title {
+        font-size: 3rem;
+    }
+}
+
+.page-subtitle-light {
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+@media (min-width: 768px) {
+    .page-subtitle-light {
+        font-size: 1.25rem;
+    }
+}
+/* ====================================
+   Main Content (becas.html)
+   ==================================== */
+
+/* Contenedor general para las secciones principales (similar a content-wrapper) */
+.content-wrapper {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 4rem; 
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* Sección de Departamentos (dpto) reusada para las secciones Exámenes y Viajes */
+.section-departamento {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .section-departamento {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Estilos de las imágenes y texto reusados de dptos.html */
+.dpto-odd { /* Exámenes */ }
+
+.dpto-even { /* Viajes de Estudio */ }
+.dpto-even .dpto-image { order: 2; }
+.dpto-even .dpto-text-content { order: 1; }
+@media (min-width: 768px) {
+    .dpto-even .dpto-image { order: 1; }
+    .dpto-even .dpto-text-content { order: 2; }
+}
+
+.dpto-title {
+    font-size: 1.875rem; 
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dpto-text-p {
+    font-size: 1.125rem;
+    color: var(--color-gray-900);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.dpto-image {
+    width: 100%;
+    height: 20rem; 
+    object-fit: cover;
+    border-radius: 0.75rem; 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+
+/* SECCIÓN DE CONVENIOS Y BECAS */
+
+.section-convenios {
+    background-color: #f3f4f6; /* Fondo gris claro similar a bg-gray-100 */
+    padding: 3rem 1rem;
+}
+
+.section-container-center {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-convenios-title {
+    font-size: 2.25rem; 
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-convenios-text {
+    font-size: 1rem;
+    color: var(--color-gray-800);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.convenios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+@media (min-width: 640px) {
+    .convenios-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en sm */
+    }
+}
+@media (min-width: 768px) {
+    .convenios-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en md */
+    }
+}
+
+.convenio-logo {
+    display: block;
+    max-width: 100%;
+    height: 4rem; /* h-16 */
+    object-fit: contain;
+    filter: grayscale(100%); /* grayscale */
+    transition: filter 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.convenio-logo:hover {
+    filter: grayscale(0%); /* hover:grayscale-0 */
+}

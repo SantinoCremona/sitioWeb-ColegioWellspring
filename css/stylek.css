@@ -1,0 +1,108 @@
+.hero-section-page {
+    position: relative;
+    height: 24rem; 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    padding-top: var(--header-height); 
+}
+
+.page-title {
+    font-size: 3rem; 
+    font-weight: 700;
+    margin-top: 0; 
+    margin-bottom: 0.5rem;
+}
+.header-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: var(--header-height);
+}
+.logo-link {
+    white-space: nowrap; 
+}
+.hero-overlay-page {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.section-subtitle-primary {
+    color: var(--color-primary);
+    text-align: center;
+}
+/* ====================================
+   Main Content (Kinder.html)
+   ==================================== */
+
+.section-niveles-content {
+    padding-top: 2rem; 
+    padding-bottom: 4rem;
+}
+
+.kinder-subtitle-time {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.kinder-cards-wrapper {
+    max-width: 80rem; /* max-w-4xl */
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space-y-6 */
+}
+
+.kinder-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.kinder-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.kinder-card-gray {
+    background-color: var(--color-gray-50);
+    color: var(--color-gray-900);
+}
+
+.kinder-card-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.kinder-card-title, .kinder-card-title-white {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.kinder-card-title {
+    color: var(--color-primary);
+}
+
+.kinder-card-title-white {
+    color: var(--color-white);
+}
+
+.kinder-card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
