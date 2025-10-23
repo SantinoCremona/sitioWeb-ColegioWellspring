@@ -387,6 +387,7 @@ html, body {
     font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 @media (min-width: 768px) {
     .section-title {
@@ -532,7 +533,15 @@ html, body {
 .dropdown-menu:hover .dropdown-submenu {
     display: block; 
 }
+.map-iframe {
+    width: 95%;
+    height: 30.5rem; /* h-52 */
+    border: 0;
+}
 
+.maps-column-center{
+    text-align: center;
+}
 .submenu-link {
     display: block;
     padding: 0.5rem 1rem;
@@ -544,115 +553,112 @@ html, body {
 .dropdown-submenu {
     display: none; 
 }
+
+/* ====================================
+   NUEVA SECCIÓN: Contacto Superior
+   ==================================== */
+
+.contact-info-strip {
+    padding: 1.5rem 1rem; /* Padding vertical */
+    background-color: var(--color-white);
+    color: var(--color-gray-900);
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.contact-info-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .contact-info-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+        gap: 2rem;
+    }
+}
+
+.contact-title {
+    font-weight: 700; /* Negrita */
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+}
+
+.contact-detail-link {
+    color: var(--color-gray-900);
+    text-decoration: none;
+}
 /* ====================================
    Footer
    ==================================== */
 
 .main-footer {
-    background-color: var(--color-gray-900);
+    background-color: var(--color-primary);
     color: var(--color-white);
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
     margin-top: 4rem;
 }
 
-.footer-container {
+.footer-convenios {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    display: grid;
-    gap: 3rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    align-items: flex-start;
-}
-@media (min-width: 768px) {
-    .footer-container {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-.footer-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--color-secondary);
-    text-align: center;
-}
-@media (min-width: 768px) {
-    .footer-title:not(.footer-column-center .footer-title) {
-        text-align: left;
-    }
-}
-
-.footer-address {
-    font-style: normal;
-    text-align: center;
-    margin-top: 0.5rem;
-}
-@media (min-width: 768px) {
-    .footer-address {
-        text-align: left;
-    }
-}
-
-.footer-text {
-    margin-bottom: 0.5rem;
-    display: flex;
+    padding: 1.5rem 1rem;
+    display: flex; 
+    justify-content: space-between; 
     align-items: center;
+}
+
+.footer-convenios-grid {
+    display: flex; 
     justify-content: center;
+    align-items: center;
+    gap: 1.5rem; 
+    flex-grow: 1; 
 }
 @media (min-width: 768px) {
-    .footer-text {
-        justify-content: flex-start;
+    .footer-convenios-grid {
+        grid-template-columns: repeat(5, 1fr); 
+        gap: 2rem;
     }
 }
 
-.footer-link {
-    margin-left: 2px;
-    transition: text-decoration 0.2s;
-    text-decoration: none;
-    color: #f7fafc;
-}
-.footer-link:hover {
-    text-decoration: underline;
+.convenio-logo-sm {
+    height: 3rem; 
+    max-width: 100px;
+    object-fit: contain;
 }
 
-.footer-column-center {
-    text-align: center;
+.convenio-logo-lg {
+    height: 3rem; 
+    max-width: 150px; /* Más ancho para el logo de ESSARP */
+    object-fit: contain;
 }
 
-.map-iframe {
-    width: 100%;
-    height: 12.5rem; /* h-52 */
-    border: 0;
-}
-
-.footer-cta-wrapper {
-    margin-top: 1rem;
-}
-
-.cta-button-secondary {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-    font-weight: 600;
-    display: inline-block;
-}
-.cta-button-secondary:hover {
-    background-color: var(--color-primary);
-}
-
-.footer-column-right {
+.copyright-year {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
     text-align: right;
+    display: none; /* Oculto en móvil */
 }
 @media (min-width: 768px) {
-    .footer-column-right {
-        text-align: right;
+    .copyright-year {
+        display: block;
     }
+}
+
+
+.footer-social-bar {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 1rem;
+    text-align: center;
 }
 
 .social-links {
@@ -662,7 +668,7 @@ html, body {
 }
 @media (min-width: 768px) {
     .social-links {
-        justify-content: flex-end;
+        justify-content: center;
     }
 }
 
@@ -670,12 +676,12 @@ html, body {
     height: 1.75rem;
     width: 1.75rem;
     transition: color 0.3s;
+    color: white;
 }
 
-.social-link:nth-child(1):hover { color: #ec4899; } /* Pink for Instagram */
-.social-link:nth-child(2):hover { color: #3b82f6; } /* Blue for Facebook */
-.social-link:nth-child(3):hover { color: #ef4444; } /* Red for YouTube */
-
+.social-icon:hover {
+    color: var(--color-secondary);
+}
 .footer-copyright {
     border-top: 1px solid rgba(107, 114, 128, 0.5); /* border-gray-700 */
     margin-top: 2rem;
