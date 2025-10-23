@@ -1,0 +1,145 @@
+/* ====================================
+   PÁGINA DE CONTACTO (contacto.html)
+   ==================================== */
+
+.section-title-center {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+}
+@media (min-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 2fr 3fr; /* Formulario más pequeño, detalles más grandes */
+    }
+}
+
+/* --- Estilos del Formulario --- */
+
+.contact-form {
+    padding: 2rem;
+    background-color: var(--color-gray-50);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+    font-size: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-sizing: border-box; /* Crucial para que el padding no desborde el ancho */
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(1, 141, 169, 0.2);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.cta-button-form {
+    display: block;
+    width: 100%;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.cta-button-form:hover {
+    background-color: var(--color-primary);
+}
+
+
+/* --- Estilos de Detalles y Mapa --- */
+
+.contact-details-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.info-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-secondary);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contact-details-section p,
+.contact-details-section a {
+    font-size: 1rem;
+    color: var(--color-gray-800);
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.map-wrapper {
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-page-map {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    display: block;
+}
