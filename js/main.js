@@ -252,45 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ------------------------------------------
-    // 4. Script para el formulario de contacto (Fetch API) - No modificado
-    // ------------------------------------------
-    const contactForm = document.getElementById("contactForm");
-    if (contactForm) {
-        contactForm.addEventListener("submit", function(e) {
-            e.preventDefault();
-            
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            if(submitButton) submitButton.disabled = true;
-
-            const formData = {
-                nombre: this.nombre.value,
-                email: this.email.value,
-                mensaje: this.mensaje.value
-            };
-
-            fetch("https://script.google.com/macros/s/AKfycbxnFIoALyRnSmnw4HMN82tLadWNHWAmoObE5gwACMbjziDbw29pAAHQYOAn1yy6mDk2zA/exec", {
-                    method: "POST",
-                    body: JSON.stringify(formData),
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                })
-                .then(res => {
-                    if (res.ok) {
-                        alert("¡Formulario enviado con éxito! Nos pondremos en contacto pronto.");
-                        this.reset();
-                    } else {
-                        return res.text().then(text => Promise.reject(new Error(text)));
-                    }
-                })
-                .catch(err => alert("Error al enviar el formulario o de conexión. Intente más tarde."))
-                .finally(() => {
-                     if(submitButton) submitButton.disabled = false;
-                });
-        });
-    }
-
-    // ------------------------------------------
     // 5. Lógica de Cambio de Header al hacer Scroll
     // ------------------------------------------
     function handleScrollHeader() {
