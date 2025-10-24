@@ -1,10 +1,6 @@
-/* ====================================
-   Main Content (Quiénes Somos)
-   ==================================== */
-
 .hero-section-page {
     position: relative;
-    height: 100vh; /* Altura completa */
+    height: 100vh; 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -13,66 +9,47 @@
     text-align: center;
     color: var(--color-white);
 }
-
 .hero-overlay-page {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Opacidad media */
+    background-color: rgba(0, 0, 0, 0.5); 
 }
-
 .hero-content-page {
     position: relative;
     padding: 1.5rem 2rem;
     z-index: 10;
 }
-
 .page-title {
-    font-size: 3rem; /* text-4xl */
+    font-size: 3rem; 
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
     .page-title {
-        font-size: 4rem; /* md:text-6xl */
+        font-size: 4rem;
     }
 }
-
-.page-subtitle {
-    font-size: 1.125rem;
-    font-weight: 300;
-}
-@media (min-width: 768px) {
-    .page-subtitle {
-        font-size: 1.25rem; 
-    }
-}
-
-/* Contenedores de Sección (Historia, Infraestructura, etc.) */
 .section-content-wrapper {
     padding: 4rem 1rem;
     background-color: var(--color-white);
 }
-
 .section-container {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
-
 .section-subtitle-primary {
     font-size: 1.875rem; 
     font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 1.5rem;
 }
-
 .section-text-default {
     color: var(--color-gray-900);
     margin-bottom: 1.5rem;
     line-height: 1.625;
 }
-
 .two-column-grid {
     display: grid;
     gap: 2rem;
@@ -85,18 +62,15 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-
 .responsive-image {
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-
 .image-shadow-xl {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-
 .styled-list {
     list-style: disc;
     margin-left: 1.5rem;
@@ -104,13 +78,11 @@
     margin-top: 1rem;
     text-align: left;
 }
-
 .primary-list li {
     color: var(--color-secondary);
     font-weight: 600;
     margin-bottom: 16px;
 }
-
 .four-column-grid {
     display: grid;
     gap: 1rem;
@@ -121,16 +93,13 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
-
 .gallery-image {
     width: 100%;
-    height: 12rem; /* h-48 */
+    height: 12rem; 
     object-fit: cover;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-/* Carrusel */
 .carousel-wrapper {
     position: relative;
     width: 100%;
@@ -138,21 +107,18 @@
     margin-bottom: 3rem;
     border-radius: 0.5rem;
 }
-
 .flex-carousel {
     display: flex;
     transition: transform 0.7s ease-in-out;
     will-change: transform;
 }
-
 .carousel-slide {
     width: 100%;
-    height: 25rem; /* h-[400px] */
+    height: 25rem; 
     object-fit: cover;
     border-radius: 0.5rem;
     flex-shrink: 0;
 }
-
 .carousel-nav-btn {
     position: absolute;
     top: 50%;
@@ -167,23 +133,18 @@
     opacity: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .carousel-wrapper:hover .carousel-nav-btn {
     opacity: 1;
 }
-
 .carousel-nav-btn:hover {
     background-color: var(--color-primary);
 }
-
 .carousel-prev {
     left: 0.5rem;
 }
-
 .carousel-next {
     right: 0.5rem;
 }
-
 .carousel-dots-container {
     position: absolute;
     bottom: 1rem;
@@ -192,8 +153,6 @@
     display: flex;
     gap: 0.5rem;
 }
-
-/* Métricas */
 .metrics-grid {
     display: grid;
     gap: 2rem;
@@ -208,7 +167,6 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
-
 .metric-item {
     padding-right: 2rem;
 }
@@ -220,24 +178,19 @@
         padding-right: 0;
     }
 }
-
 .metric-number {
     font-size: 2.25rem;
     font-weight: 800;
     color: var(--color-primary);
 }
-
 .metric-label {
     color: var(--color-gray-800);
     margin-top: 0.25rem;
 }
-
-/* SECCIÓN PILARES (MVV) */
 .section-pilares {
     padding: 4rem 1rem;
     background-color: #f3f4f6; /* bg-gray-100 */
 }
-
 .section-title-center {
     font-size: 2.25rem;
     font-weight: 700;
@@ -245,7 +198,6 @@
     text-align: center;
     margin-bottom: 3rem;
 }
-
 .mvv-card {
     max-width: 75rem;
     margin-left: auto;
@@ -256,21 +208,17 @@
     margin-bottom: 2.5rem;
     text-align: center;
 }
-
 .mvv-card-primary {
     background-color: var(--color-primary);
     color: var(--color-white);
 }
-
 .mvv-card-white {
     background-color: var(--color-white);
 }
-
 .mvv-card-secondary {
     background-color: var(--color-secondary);
     color: var(--color-white);
 }
-
 .mvv-icon {
     height: 3rem;
     width: 3rem;
@@ -278,7 +226,6 @@
     margin-right: auto;
     margin-bottom: 1rem;
 }
-
 .mvv-icon-secondary {
     color: var(--color-secondary);
 }
@@ -288,7 +235,6 @@
 .mvv-icon-white {
     color: var(--color-white);
 }
-
 .mvv-title {
     font-size: 1.875rem;
     font-weight: 700;
@@ -300,7 +246,6 @@
 .mvv-title-white {
     color: var(--color-white);
 }
-
 .mvv-text {
     font-size: 1.125rem;
 }

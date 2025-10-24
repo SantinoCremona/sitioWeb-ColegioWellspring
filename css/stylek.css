@@ -10,7 +10,6 @@
     color: var(--color-white);
     padding-top: var(--header-height); 
 }
-
 .page-title {
     font-size: 3rem; 
     font-weight: 700;
@@ -39,31 +38,22 @@
     color: var(--color-primary);
     text-align: center;
 }
-/* ====================================
-   Main Content (Kinder.html)
-   ==================================== */
-
 .section-niveles-content {
     padding-top: 2rem; 
     padding-bottom: 4rem;
 }
-
 .kinder-subtitle-time {
-    font-size: 1.125rem; /* text-lg */
+    font-size: 1.125rem;
     font-weight: 700;
     color: var(--color-primary);
     text-align: center;
     margin-bottom: 0.25rem;
 }
-
-/* --- Bloque Central Principal --- */
-
 .level-main-text-box {
-    max-width: 65rem; /* Limita el ancho del texto central */
+    max-width: 65rem;
     margin: 3rem auto 0;
     padding: 0 1rem;
 }
-
 .main-text-body {
     font-size: 1rem;
     line-height: 1.5;
@@ -72,11 +62,10 @@
     margin-top: 2rem;
     text-align: center;
 }
-
 .main-text-highlight {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
-    font-weight: 700; /* Negrita */
+    font-weight: 700;
     line-height: 1.6;
     color: var(--color-secondary);
     text-align: center;
@@ -89,18 +78,14 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 .highlight-line {
     display: block;
 }
-
-
 .level-supporting-text-bottom {
     max-width: 65rem; 
     margin: 3rem auto 0;
     padding: 0 1rem;
 }
-
 .supporting-paragraph {
     font-size: 1rem;
     line-height: 1.7;
@@ -108,8 +93,6 @@
     text-align: center; 
     margin-bottom: 1.5rem;
 }
-
-/* Carrusel */
 .carousel-wrapper {
     position: relative;
     width: 80%;
@@ -119,21 +102,18 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 .flex-carousel {
     display: flex;
     transition: transform 0.7s ease-in-out;
     will-change: transform;
 }
-
 .carousel-slide {
     width: 100%;
-    height: 30rem; /* h-[400px] */
+    height: 30rem; 
     object-fit: cover;
     border-radius: 0.5rem;
     flex-shrink: 0;
 }
-
 .object-focus-top-kin{
     object-position: center 38%;
 }
@@ -154,23 +134,18 @@
     opacity: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .carousel-wrapper:hover .carousel-nav-btn {
     opacity: 1;
 }
-
 .carousel-nav-btn:hover {
     background-color: var(--color-primary);
 }
-
 .carousel-prev {
     left: 0.5rem;
 }
-
 .carousel-next {
     right: 0.5rem;
 }
-
 .carousel-dots-container {
     position: absolute;
     bottom: 1rem;
