@@ -239,27 +239,10 @@ html, body {
 }
 @media (min-width: 768px) {
     .hero-title {
-        font-size: 3.75rem;
-    }
-}
-.hero-subtitle {
-    font-size: 1rem; 
-    margin-bottom: 1.25rem;
-}
-@media (min-width: 768px) {
-    .hero-subtitle {
-        font-size: 1.5rem; 
-    }
-}
-.hero-subtext {
-    font-size: 1rem; 
-    margin-bottom: 2.25rem;
-    font-style: italic;
-    opacity: 0.9;
-}
-@media (min-width: 768px) {
-    .hero-subtext {
-        font-size: 1.25rem; 
+        font-size: 3.25rem;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 @keyframes fadeIn {
@@ -497,6 +480,7 @@ html, body {
     align-items: center;
     gap: 1.5rem; 
     flex-grow: 1; 
+    flex-wrap: wrap;
 }
 @media (min-width: 768px) {
     .footer-convenios-grid {
