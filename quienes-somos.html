@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/styleqs.css">
 </head>
 <body class="page-body"> 
-    <header class="main-header" id="main-header">
+   <header class="main-header" id="main-header">
         <div class="header-container">
             <a href="index.html" class="logo-link">
                 <img src="img/logo Wellspring School.png" alt="Logo del Colegio Wellspring" class="logo">
@@ -68,6 +68,7 @@
                 </div>
 
                 <a href="dptos.html" class="nav-link">Departamentos</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzCSicjDBsZlArhnlZLb-bPR_i0oKVvcZXRNEYyyE7B4n3Uw/viewform" target="_blank" class="nav-link">Admisiones</a>
                 <a href="index.html#maps" class="nav-link">Contacto</a>
             </nav>
 
@@ -82,6 +83,7 @@
         </div>
           
         <nav id="mobile-menu" class="mobile-nav-menu hidden">
+    
             <button id="qs-btn" class="mobile-nav-link menu-toggle-button" aria-expanded="false" aria-controls="qs-submenu">
                 <span>¿Quiénes Somos?</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="mobile-arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -110,13 +112,14 @@
             <a href="dptos.html" class="mobile-nav-link">
                 <span>Departamentos</span>
             </a>
-            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzCSicjDBsZlArhnlZLb-bPR_i0oKVvcZXRNEYyyE7B4n3Uw/viewform" target="_blank" class="mobile-nav-link">
+                <span>Admisiones</span>
+            </a>
             <a href="index.html#maps" class="mobile-nav-link">
                 <span>Contacto</span>
             </a>
         </nav>
     </header>
-
     <main>
         <section id="inicio" class="hero-section hero-section-page" style="background-image: url('img/NuestroColegioHero.jpg');" data-scroll-mt aria-labelledby="main-heading">
             <div class="hero-overlay-page"></div>
@@ -133,12 +136,12 @@
                 </p>
                     <div class="text-left-content">
                         <p class="section-text-default">Nuestro querido símbolo, el árbol de Ginkgo Biloba. Este árbol, único y resistente, nos recuerda nuestra Misión y Visión como Colegio. Sus cinco hojas, con forma de abanico, nos enseñan sobre los pilares que sostienen nuestra labor diaria:</p>
-                        <ul class="styled-list">
-                            <li>EL RESPETO</li>
-                            <li>EL COMPROMISO Y LA LEALTAD</li>
-                            <li>La INTEGRIDAD Y LA HONESTIDAD</li>
-                            <li>LA RESPONSABILIDAD Y LA FORTALEZA</li>
-                            <li>LA SOLIDARIDAD</li>
+                        <ul class="styled-list centered-values-list">
+                            <li class="value-item">EL RESPETO</li>
+                            <li class="value-item">EL COMPROMISO Y LA LEALTAD</li>
+                            <li class="value-item">La INTEGRIDAD Y LA HONESTIDAD</li>
+                            <li class="value-item">LA RESPONSABILIDAD Y LA FORTALEZA</li>
+                            <li class="value-item">LA SOLIDARIDAD</li>
                         </ul>
                     </div>
                 <p class="section-text-default">
@@ -166,17 +169,17 @@
                 </div>
 
                 <div class="metrics-grid">
-                    <div class="metric-item">
-                        <h3 class="metric-number">40.000 m²</h3>
-                        <p class="metric-label">de campus</p>
+                    <div class="metric-item" id="metric-1">
+                        <h3 class="metric-number">40.000 M²</h3>
+                        <p class="metric-label">DE CAMPUS</p>
                     </div>
-                    <div class="metric-item metric-divider">
+                    <div class="metric-item metric-divider" id="metric-2">
                         <h3 class="metric-number">30 años</h3>
-                        <p class="metric-label">enseñando y acompañando</p>
+                        <p class="metric-label">ENSEÑANDO Y ACOMPAÑANDO</p>
                     </div>
-                    <div class="metric-item">
+                    <div class="metric-item" id="metric-3">
                         <h3 class="metric-number">+800</h3>
-                        <p class="metric-label">egresados</p>
+                        <p class="metric-label">EGRESADOS</p>
                     </div>
                 </div>
             </div>
@@ -253,15 +256,16 @@
             </div>
             </div>   
             <div class="footer-social-bar">
-                <h3 class="footer-title">Seguinos en:</h3>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/colegiowellspring" target="_blank" aria-label="Instagram del Colegio Wellspring">
+                <p class="social-follow-text">Seguinos en:</p> 
+                    
+                    <a href="https://www.instagram.com/colegiowellspring" target="_blank" aria-label="Instagram del Colegio Wellspring" class="social-text-link">
                         <img src="img/pie-instagram_logo.png" alt="Logo de Instagram" class="logosredes">
                     </a>
-                    <a href="https://www.facebook.com/colegiowellspring" target="_blank" class="social-link" aria-label="Facebook del Colegio Wellspring">
+                    <a href="https://www.facebook.com/colegiowellspring" target="_blank" class="social-link" aria-label="Facebook del Colegio Wellspring" class="social-text-link">
                         <img src="img/pie-facebook_logo.png" alt="Logo de Facebook" class="logosredes">
                     </a>
-                    <a href="https://www.linkedin.com/company/wellspring-school/" target="_blank" class="social-link" aria-label="Canal de Linkedin del Colegio Wellspring">
+                    <a href="https://www.linkedin.com/company/wellspring-school/" target="_blank" class="social-link" aria-label="Canal de Linkedin del Colegio Wellspring" class="social-text-link">
                         <img src="img/pie-linkedin_logo.png" alt="Logo de Linkedin" class="logosredes">
                     </a>
                 </div>

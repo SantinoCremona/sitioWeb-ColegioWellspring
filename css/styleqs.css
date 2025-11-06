@@ -1,6 +1,6 @@
 .hero-section-page {
     position: relative;
-    height: 100vh; 
+    height: 24rem; 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -20,13 +20,13 @@
     z-index: 10;
 }
 .page-title {
-    font-size: 3rem; 
+    font-size: 2.25rem; 
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
     .page-title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
 .section-content-wrapper {
@@ -62,19 +62,36 @@
 }
 .styled-list {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
     line-height: 1.6;
-    color: var(--color-secondary);
-    text-align: center;
-    margin: 2rem 0;
+    margin: 5rem 0;
     padding: 2rem 0;
     border-top: 2px solid var(--color-secondary);
     border-bottom: 2px solid var(--color-secondary);    
-    display: block;
-    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+.centered-values-list {
+    list-style: none; 
+    padding: 10;
+    margin: 1.5rem auto; 
+    text-align: center; 
+    max-width: 500px; 
+}
+.value-item {
+    position: relative;
+    display: inline-block; 
+    text-align: center; 
+    font-size: 1.3rem; 
+    font-weight: 700;
+    color: var(--color-secondary); 
+    margin-bottom: 0.8rem;
+}
+
+.value-item::before {
+    content: "•";
+    color: var(--color-secondary); 
+    font-weight: 800;
+    margin-right: 0.5rem; 
 }
 
 .four-column-grid {

@@ -148,7 +148,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+    const delayTime = 50; 
+    let hideTimer;
 
+    dropdownMenus.forEach(dropdown => {
+        const submenu = dropdown.querySelector('.dropdown-submenu');
+
+        if (submenu) {
+            dropdown.addEventListener('mouseenter', () => {
+                clearTimeout(hideTimer); 
+                submenu.style.display = 'block';
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                clearTimeout(hideTimer); 
+                
+                hideTimer = setTimeout(() => {
+                    submenu.style.display = 'none';
+                }, delayTime);
+            });
+        }
+    });
     // ------------------------------------------
     // 2. Lógica del Carrusel (Unificado)
     // ------------------------------------------
@@ -258,7 +279,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const header = document.querySelector('.main-header');
         if (!header) return; 
 
-        // Define cuántos píxeles debe bajar antes de cambiar el color
         const scrollThreshold = 50; 
 
         if (window.scrollY > scrollThreshold) {
@@ -268,6 +288,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Escuchar el evento de scroll en la ventana
     window.addEventListener('scroll', handleScrollHeader);
     window.addEventListener('DOMContentLoaded', handleScrollHeader); 
+
+
+const PRELOADER_SEEN_KEY = 'preloaderSeen';
+
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    
+    const hasPreloaderBeenSeen = sessionStorage.getItem(PRELOADER_SEEN_KEY);
+
+    if (preloader) {
+        if (hasPreloaderBeenSeen) {
+            preloader.style.display = 'none';
+        } else {
+            sessionStorage.setItem(PRELOADER_SEEN_KEY, 'true');
+            preloader.classList.add('preloader-hidden');
+            setTimeout(() => {
+                preloader.remove(); 
+            }, 500); 
+        }
+    }
+});
