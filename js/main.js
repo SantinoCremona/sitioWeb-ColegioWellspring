@@ -307,7 +307,39 @@ window.addEventListener('load', () => {
             preloader.classList.add('preloader-hidden');
             setTimeout(() => {
                 preloader.remove(); 
-            }, 500); 
+            }, 300); 
         }
     }
 });
+
+/**
+ * LÓGICA DE CARGA PEREZOSA (LAZY LOAD) PARA IFRAMES (Maps, Instagram, etc.)
+ */
+function lazyLoadIframes() {
+    const iframes = document.querySelectorAll('iframe[data-src]');
+
+    const observerOptions = {
+        rootMargin: '200px 0px', 
+        threshold: 0.01 
+    };
+
+    const iframeObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const iframe = entry.target;
+                const dataSrc = iframe.getAttribute('data-src');
+
+                if (dataSrc) {
+                    iframe.setAttribute('src', dataSrc); 
+                    iframe.removeAttribute('data-src'); 
+                }
+                
+                observer.unobserve(iframe);
+            }
+        });
+    }, observerOptions);
+    iframes.forEach(iframe => {
+        iframeObserver.observe(iframe);
+    });
+}
+lazyLoadIframes();
