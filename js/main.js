@@ -290,28 +290,6 @@ const dropdownMenus = document.querySelectorAll('.dropdown-menu');
 
     window.addEventListener('scroll', handleScrollHeader);
     window.addEventListener('DOMContentLoaded', handleScrollHeader); 
-
-
-const PRELOADER_SEEN_KEY = 'preloaderSeen';
-
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    
-    const hasPreloaderBeenSeen = sessionStorage.getItem(PRELOADER_SEEN_KEY);
-
-    if (preloader) {
-        if (hasPreloaderBeenSeen) {
-            preloader.style.display = 'none';
-        } else {
-            sessionStorage.setItem(PRELOADER_SEEN_KEY, 'true');
-            preloader.classList.add('preloader-hidden');
-            setTimeout(() => {
-                preloader.remove(); 
-            }, 300); 
-        }
-    }
-});
-
 /**
  * LÓGICA DE CARGA PEREZOSA (LAZY LOAD) PARA IFRAMES (Maps, Instagram, etc.)
  */
