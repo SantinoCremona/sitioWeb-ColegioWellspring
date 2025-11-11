@@ -274,7 +274,7 @@ html, body {
     background-color: var(--color-white);
 }
 .section-niveles {
-    padding: 4rem 1rem;
+    padding: 4rem 0rem;
     background-color: #f3f4f6;
 }
 
@@ -702,6 +702,8 @@ html, body {
 .mvv-text {
     font-size: 1.125rem;
     max-width: 90vw;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .mvv-text-default {
     color: var(--color-gray-900);
