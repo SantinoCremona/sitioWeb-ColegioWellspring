@@ -410,7 +410,6 @@ html, body {
     margin-top: 1.5rem;
     color: var(--color-gray-800);
 }
-
 .map-iframe {
     width: 90%;
     max-width: 95vw;
@@ -479,7 +478,7 @@ html, body {
 .hero-overlay-page {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.2); 
 }
 .hero-content-page {
     position: relative;
@@ -490,6 +489,7 @@ html, body {
     font-size: 2.25rem; 
     font-weight: 700;
     margin-bottom: 0.5rem;
+    margin-top: 200px;
 }
 @media (min-width: 768px) {
     .page-title {
@@ -554,14 +554,12 @@ html, body {
     color: var(--color-secondary); 
     margin-bottom: 0.8rem;
 }
-
 .value-item::before {
     content: "•";
     color: var(--color-secondary); 
     font-weight: 800;
     margin-right: 0.5rem; 
 }
-
 .four-column-grid {
     display: grid;
     gap: 1rem;
@@ -736,32 +734,21 @@ html, body {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-.dpto-even .dpto-image {
-    order: 2;
-}
-.dpto-even .dpto-text-content {
-    order: 1; 
-}
-@media (min-width: 768px) {
-    .dpto-even .dpto-image {
-        order: 1; 
-    }
-    .dpto-even .dpto-text-content {
-        order: 2; 
-    }
-}
+
 .dpto-title {
     font-size: 1.875rem; 
     font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 1rem;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 .dpto-text-p {
     font-size: 1.1rem; 
     color: var(--color-gray-900);
     margin-bottom: 0.75rem;
     line-height: 1.5;
+    text-align: center;
 }
 .dpto-image {
     width: 100%;
@@ -786,7 +773,7 @@ html, body {
     font-weight: 700;
     color: var(--color-primary);
     text-align: center;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.2rem;
 }
 .level-main-text-box {
     max-width: 65rem;
@@ -803,7 +790,7 @@ html, body {
 }
 .main-text-highlight {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.6;
     color: var(--color-secondary);
