@@ -24,11 +24,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page-body"> 
+<body class="page-body fixed-blue-header"> 
     <header class="main-header" id="main-header">
         <div class="header-container">
             <a href="index.html" class="logo-link">
-                <img src="img/logo Wellspring School.png" alt="Logo del Colegio Wellspring" class="logo">
+                <img src="img/logo_wellspring.png" alt="Logo del Colegio Wellspring" class="logo">
             </a>
             
             <nav id="desktop-nav" class="desktop-nav">
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="dropdown-menu">
-                    <a href="index.html#niveles" class="nav-link dropdown-toggle" aria-expanded="false" aria-controls="niveles-submenu-desktop">
+                    <a href="index.html#niveles" class="nav-link dropdown-toggle nav-link-activo" aria-expanded="false" aria-controls="niveles-submenu-desktop">
                         <span>Académico</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" fill="none" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -62,7 +62,7 @@
                     </a>
                     <div id="niveles-submenu-desktop" class="dropdown-submenu">
                         <a href="jardin.html" class="submenu-link">Kinder</a>
-                        <a href="primaria.html" class="submenu-link">Primaria</a>
+                        <a href="primaria.html" class="submenu-link nav-link-activo">Primaria</a>
                         <a href="secundaria.html" class="submenu-link">Secundaria</a>
                         <a href="becas.html" class="submenu-link">Exámenes y Viajes</a>
                     </div>
@@ -122,7 +122,7 @@
         </nav>
     </header>
     <main>
-        <section id="inicio" class="hero-section-page page-section-hero" style="background-image: url('img/primariohero.jpg');" data-scroll-mt aria-labelledby="main-heading">
+        <section id="inicio" class="hero-section-page page-section-hero" style="background-image: url('img/encabezado_ep.jpg');" data-scroll-mt aria-labelledby="main-heading">
             <div class="hero-overlay-page"></div>
             <div class="hero-content hero-content-page">
                 <h1 id="main-heading" class="page-title">ACADÉMICO</h1>
@@ -164,11 +164,12 @@
         </section>
         <div class="carousel-wrapper-niv">
                     <div id="infra-carousel" class="flex-carousel">
-                        <img src="img/primcar1.jpg" alt="Chicos de jardin estudiando" class="carousel-slide object-focus-top-kin" loading="lazy">
-                        <img src="img/primcar2.jpg" alt="Chicos y su creatividad" class="carousel-slide object-focus-top-kin" loading="lazy">
-                        <img src="img/primcar3.jpg" alt="Chicos del jardin jugando" class="carousel-slide" loading="lazy">
-                        <img src="img/primcar4.jpg" alt="Chicos del jardin aprendiendo al aire libre" class="carousel-slide object-focus-low-kin" loading="lazy">
-                        <img src="img/primcar5.jpg" alt="Familia en kinder day" class="carousel-slide" loading="lazy">
+                        <img src="img/primcar1.jpg" alt="Chicos de jardin estudiando" class="carousel-slide object-focus-top-kin tamanocar" loading="lazy">
+                        <img src="img/primcar2.jpg" alt="Chicos y su creatividad" class="carousel-slide object-focus-top-kin tamanocar" loading="lazy">
+                        <img src="img/primcar3.jpg" alt="Chicos del jardin jugando" class="carousel-slide tamanocar" loading="lazy">
+                        <img src="img/primcar4.jpg" alt="Chicos del jardin aprendiendo al aire libre" class="carousel-slide object-focus-low-kin tamanocar" loading="lazy">
+                        <img src="img/edfis.JPG" alt="Chicos del jardin aprendiendo al aire libre" class="carousel-slide tamanocar" loading="lazy">
+                        <img src="img/primcar5.jpg" alt="Familia en kinder day" class="carousel-slide tamanocar" loading="lazy">
                     </div>
                     <button id="infra-prev" aria-label="Anterior imagen de infraestructura" class="carousel-nav-btn-niv carousel-prev-niv">❮</button>
                     <button id="infra-next" aria-label="Siguiente imagen de infraestructura" class="carousel-nav-btn-niv carousel-next-niv">❯</button>
@@ -193,22 +194,17 @@
                 <div class="social-links">
                 <p class="social-follow-text">Seguinos en:</p> 
                     
-                    <a href="https://www.instagram.com/colegiowellspring" target="_blank" aria-label="Instagram del Colegio Wellspring" class="social-text-link">
-                        <img src="img/pie-instagram_logo.png" alt="Logo de Instagram" class="logosredes">
-                    </a>
                     <a href="https://www.facebook.com/colegiowellspring" target="_blank" class="social-link" aria-label="Facebook del Colegio Wellspring" class="social-text-link">
                         <img src="img/pie-facebook_logo.png" alt="Logo de Facebook" class="logosredes">
+                    </a>
+                    <a href="https://www.instagram.com/colegiowellspring" target="_blank" aria-label="Instagram del Colegio Wellspring" class="social-text-link">
+                        <img src="img/pie-instagram_logo.png" alt="Logo de Instagram" class="logosredes">
                     </a>
                     <a href="https://www.linkedin.com/company/wellspring-school/" target="_blank" class="social-link" aria-label="Canal de Linkedin del Colegio Wellspring" class="social-text-link">
                         <img src="img/pie-linkedin_logo.png" alt="Logo de Linkedin" class="logosredes">
                     </a>
                 </div>
             </div>
-
-        <div class="footer-copyright">
-            <p>© 2025 Wellspring. Todos los derechos reservados.</p>
-            <p>Diseño & Desarrollo por SCrem</p>
-        </div>
     </footer>
 
 

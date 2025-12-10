@@ -34,7 +34,7 @@ html, body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); 
 }
 .header-container {
-    max-width: 1280px; 
+    max-width: 95%; 
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -199,6 +199,25 @@ html, body {
         display: flex;
     }
 }
+.desktop-nav .nav-link-activo {
+    text-decoration: underline;
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 4px; 
+}
+.desktop-nav .nav-link-activo:hover {
+    color: var(--color-secondary);
+}
+
+.fixed-blue-header .main-header {
+    background-color: var(--color-primary); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); 
+}
+
+.fixed-blue-header .main-header.scrolled {
+    background-color: var(--color-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
 /* ====================================
    Main Content - Secciones
    ==================================== */
@@ -269,18 +288,17 @@ html, body {
     text-align: center;
     background-color: var(--color-gray-50);
 }
-.section-quienes, .section-instagram {
-    padding: 4rem 1rem;
+.section-quienes, .section-instagram, .maps-column-center{
+    padding: 3rem 1rem;
     background-color: var(--color-white);
 }
 .section-niveles {
-    padding: 4rem 0rem;
-    background-color: #f3f4f6;
+    padding: 3rem 1rem;
 }
 
 .container.mx-auto {
-    width: 90%; 
-    max-width: 95vw;
+    width: 100%; 
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -302,7 +320,7 @@ html, body {
     }
 }
 .section-text-center {
-    max-width: 95vw; 
+    max-width: 70%; 
     margin-left: auto;
     margin-right: auto;
     font-size: 1.125rem; 
@@ -318,7 +336,8 @@ html, body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 40px;
+    font-size: 20px;
 }
 .cta-button-admisiones:hover {
     background-color: var(--color-primary);
@@ -326,7 +345,7 @@ html, body {
 }
 .cta-button-primary {
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-color: var(--color-white);
     color: var(--color-primary);
     padding: 0.75rem 1.5rem;
@@ -356,10 +375,11 @@ html, body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05); 
     overflow: hidden; 
     transition: all 0.3s;
+    margin-bottom: 40px;
 }
 .card-image {
     width: 100%;
-    height: 22rem; 
+    height: 25rem; 
     object-fit: cover;
     border-radius: 0; 
     margin-bottom: 0;
@@ -401,8 +421,7 @@ html, body {
     width: 100%;
 }
 .instagram-iframe {
-    width: 90%;
-    max-width: 95vw;
+    width: 100%;
     border-radius: 0.75rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
@@ -411,15 +430,13 @@ html, body {
     color: var(--color-gray-800);
 }
 .map-iframe {
-    width: 90%;
-    max-width: 95vw;
+    width: 100%;
+    max-width: 100%;
     height: 30.5rem;
     border: 0;
+    border-radius: 0.75rem;
 }
-.maps-column-center{
-    text-align: center;
-    width: 100%;
-}
+
 .submenu-link {
     display: block;
     padding: 0.5rem 1rem;
@@ -438,7 +455,6 @@ html, body {
     font-size: 0.9rem;
 }
 .contact-info-container {
-    max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -466,7 +482,7 @@ html, body {
    ==================================== */
 .hero-section-page {
     position: relative;
-    height: 24rem; 
+    height: 22rem; 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -474,6 +490,7 @@ html, body {
     justify-content: center;
     text-align: center;
     color: var(--color-white);
+    margin-top: var(--header-height);
 }
 .hero-overlay-page {
     position: absolute;
@@ -501,8 +518,7 @@ html, body {
     background-color: var(--color-white);
 }
 .section-container {
-    width: 90%;
-    max-width: 95vw;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -517,8 +533,10 @@ html, body {
     color: var(--color-gray-900);
     margin-bottom: 1.5rem;
     line-height: 1.625;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem;
 }
-
 .responsive-image {
     width: 100%;
     height: auto;
@@ -572,7 +590,7 @@ html, body {
 }
 .gallery-image {
     width: 100%;
-    height: 12rem; 
+    height: 18rem; 
     object-fit: cover;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -591,7 +609,7 @@ html, body {
 }
 .carousel-slide {
     width: 100%;
-    height: 30rem; 
+    height: 18rem; 
     object-fit: cover;
     border-radius: 0.5rem;
     flex-shrink: 0;
@@ -663,6 +681,7 @@ html, body {
 .metric-label {
     color: var(--color-white);
     margin-top: 0.25rem;
+    font-weight: 800;
 }
 .section-pilares {
     background-color: #f3f4f6; 
@@ -699,9 +718,9 @@ html, body {
 }
 .mvv-text {
     font-size: 1.125rem;
-    max-width: 90vw;
-    margin-left: 10px;
-    margin-right: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .mvv-text-default {
     color: var(--color-gray-900);
@@ -713,7 +732,7 @@ html, body {
    Dptos
    ==================================== */
 .content-wrapper {
-    max-width: 1280px;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
@@ -752,7 +771,7 @@ html, body {
 }
 .dpto-image {
     width: 100%;
-    height: 20rem; 
+    height: 24rem; 
     object-fit: cover;
     border-radius: 0.75rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
@@ -776,12 +795,12 @@ html, body {
     margin-bottom: 0.2rem;
 }
 .level-main-text-box {
-    max-width: 65rem;
+    max-width: 90%;
     margin: 3rem auto 0;
     padding: 0 1rem;
 }
 .main-text-body {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     color: var(--color-gray-900);
     margin-bottom: 2rem;
@@ -800,7 +819,7 @@ html, body {
     border-top: 2px solid var(--color-secondary);
     border-bottom: 2px solid var(--color-secondary);    
     display: block;
-    max-width: 80%;
+    max-width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -808,12 +827,12 @@ html, body {
     display: block;
 }
 .level-supporting-text-bottom {
-    max-width: 65rem; 
+    max-width: 90%; 
     margin: 3rem auto 0;
     padding: 0 1rem;
 }
 .supporting-paragraph {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     color: var(--color-gray-900);
     text-align: center; 
@@ -821,14 +840,17 @@ html, body {
 }
 .carousel-wrapper-niv {
     position: relative;
-    width: 80%;
+    width: 100%;
+    max-width: 70%;
     overflow: hidden;
     margin-bottom: 3rem;
     border-radius: 0.5rem;
     margin-left: auto;
     margin-right: auto;
 }
-
+.object-focus-top-kin2{
+    object-position: center 30%;
+}
 .object-focus-top-kin{
     object-position: center 38%;
 }
@@ -869,6 +891,13 @@ html, body {
     display: flex;
     gap: 0.5rem;
 }
+.tamanocar {
+    width: 100%;
+    height: 40rem; 
+    object-fit: cover;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+}
 /* ====================================
    Footer
    ==================================== */
@@ -880,7 +909,7 @@ html, body {
     margin-top: 4rem;
 }
 .footer-convenios {
-    max-width: 1280px;
+    max-width: 95%;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5rem 1rem;
@@ -890,7 +919,7 @@ html, body {
 }
 .footer-convenios-grid {
     display: flex; 
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 1.5rem; 
     flex-grow: 1; 
@@ -924,7 +953,7 @@ html, body {
     }
 }
 .footer-social-bar {
-    border-top: 1px solid rgba(107, 114, 128, 0.5); 
+    border-top: 3px solid rgba(255, 255, 255, 0.5); 
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -948,12 +977,6 @@ html, body {
     height: 80px;
     object-fit: contain; 
     transition: opacity 0.3s;
-}
-.footer-copyright {
-    padding-top: 1rem;
-    text-align: center;
-    font-size: 0.875rem;
-    color: rgba(156, 163, 175, 1);
 }
 .social-follow-text {
     color: var(--color-white);
