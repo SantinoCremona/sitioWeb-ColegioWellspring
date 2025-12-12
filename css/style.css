@@ -252,7 +252,7 @@ html, body {
 .hero-title {
     font-size: 2.25rem; 
     font-weight: 700; 
-    margin-top: 200px;
+    margin-top: 2z0px;
     margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
@@ -753,7 +753,6 @@ html, body {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-
 .dpto-title {
     font-size: 1.875rem; 
     font-weight: 700;
@@ -771,7 +770,7 @@ html, body {
 }
 .dpto-image {
     width: 100%;
-    height: 24rem; 
+    height: 100%; 
     object-fit: cover;
     border-radius: 0.75rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
@@ -848,15 +847,6 @@ html, body {
     margin-left: auto;
     margin-right: auto;
 }
-.object-focus-top-kin2{
-    object-position: center 30%;
-}
-.object-focus-top-kin{
-    object-position: center 38%;
-}
-.object-focus-low-kin{
-    object-position: center 80%;
-}
 .carousel-nav-btn-niv {
     position: absolute;
     top: 50%;
@@ -893,7 +883,7 @@ html, body {
 }
 .tamanocar {
     width: 100%;
-    height: 40rem; 
+    height: 100%; 
     object-fit: cover;
     border-radius: 0.5rem;
     flex-shrink: 0;
