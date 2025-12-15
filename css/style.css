@@ -818,7 +818,7 @@ html, body {
     border-top: 2px solid var(--color-secondary);
     border-bottom: 2px solid var(--color-secondary);    
     display: block;
-    max-width: 60%;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
