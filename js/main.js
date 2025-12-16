@@ -197,19 +197,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
-    
-    function initCarousel(id) {
-        const carousel = document.getElementById(`${id}-carousel`);
+    function initCarousel(id, slideSelector = '.carousel-slide') { 
+        const carousel = document.getElementById(`${id}-carousel`); 
         const prevButton = document.getElementById(`${id}-prev`);
         const nextButton = document.getElementById(`${id}-next`);
         const dotsContainer = document.getElementById(`${id}-dots`);
 
-        if (!carousel || !prevButton || !nextButton) return;
+        if (!carousel || !prevButton || !nextButton) {
+            return; 
+        }
 
-        const slides = carousel.querySelectorAll('.carousel-slide'); 
+        const slides = carousel.querySelectorAll(slideSelector); 
         const totalSlides = slides.length;
         let currentIndex = 0;
         const autoplayDuration = 4000;
+
+        if (totalSlides === 0) return;
+
 
         if (dotsContainer) {
             dotsContainer.innerHTML = '';
@@ -248,14 +252,12 @@ window.addEventListener('load', () => {
         carousel.parentElement.addEventListener('mouseleave', () => {
             autoPlayInterval = setInterval(() => moveToSlide(currentIndex + 1), autoplayDuration);
         });
-
         updateCarousel();
         window.addEventListener('resize', updateCarousel);
     }
-    
-    initCarousel('historia');
+    initCarousel('historia', '.carousel-slide');
+    initCarousel('historia-mobile', '.carousel-slide-mobile');
+    initCarousel('infra-mobile', '.carousel-slide-mobile'); 
     initCarousel('infra'); 
-
 });
-
 lazyLoadIframes();
