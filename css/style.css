@@ -88,11 +88,15 @@ html, body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.25rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    display: none;
+    display: none !important;;
     transition: opacity 0.3s, visibility 0.3s;
     z-index: 50;
     color: var(--color-gray-800);
 }
+.dropdown-menu:hover > .dropdown-submenu {
+    display: block !important;
+}
+
 .submenu-link {
     display: block;
     padding: 0.5rem 1rem;
@@ -223,7 +227,7 @@ html, body {
    ==================================== */
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,8 +256,7 @@ html, body {
 .hero-title {
     font-size: 2.25rem; 
     font-weight: 700; 
-    margin-top: 20rem;
-    margin-bottom: 1rem;
+    margin-top: 15rem;
 }
 @media (min-width: 768px) {
     .hero-title {
@@ -284,7 +287,6 @@ html, body {
     animation-delay: 0.2s;
 }
 .section-admisiones {
-    padding: 3rem 1rem; 
     text-align: center;
     background-color: var(--color-gray-50);
 }
@@ -327,6 +329,15 @@ html, body {
     line-height: 1.625; 
     color: var(--color-gray-900);
 }
+.section-text-centera {
+    max-width: 70%; 
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem; 
+    line-height: 1.625; 
+    color: var(--color-gray-900);
+    margin-top: 4rem;
+}
 .cta-button-admisiones {
     display: inline-block;
     background-color: var(--color-secondary);
@@ -336,7 +347,7 @@ html, body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
     text-decoration: none;
-    margin-top: 40px;
+    margin-top: 4rem;
     font-size: 20px;
 }
 .cta-button-admisiones:hover {
@@ -377,6 +388,10 @@ html, body {
     transition: all 0.3s;
     margin-bottom: 40px;
 }
+.level-card:hover{
+    transform: scale(1.05);
+    opacity: 0.9;
+}
 .card-image {
     width: 100%;
     height: 25rem; 
@@ -406,14 +421,10 @@ html, body {
     letter-spacing: 0.05em; 
 }
 .card-title:hover {
-   color: #1a202c;
+   color: var(--color-primary);
 }
 .card-button {
     text-decoration: none;
-}
-.card-button:hover {
-    background-color: var(--color-primary);
-    text-decoration: underline;
 }
 .instagram-embed-wrapper {
     display: flex;
@@ -447,36 +458,6 @@ html, body {
 .dropdown-submenu {
     display: none; 
 }
-.contact-info-strip {
-    padding: 1.5rem 1rem; 
-    background-color: var(--color-white);
-    color: var(--color-gray-900);
-    border-bottom: 1px solid #ddd;
-    font-size: 0.9rem;
-}
-.contact-info-container {
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 2rem;
-    text-align: center;
-}
-@media (min-width: 768px) {
-    .contact-info-container {
-        grid-template-columns: repeat(4, 1fr); 
-        gap: 2rem;
-    }
-}
-.contact-title {
-    font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 0.25rem;
-}
-.contact-detail-link {
-    color: var(--color-gray-900);
-    text-decoration: none;
-}
 /* ====================================
    Quienes Somos
    ==================================== */
@@ -495,7 +476,7 @@ html, body {
 .hero-overlay-page {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.2); 
+    background-color: rgba(0, 0, 0, 0.3); 
 }
 .hero-content-page {
     position: relative;
@@ -802,6 +783,14 @@ html, body {
     text-align: center;
     margin-bottom: 0.2rem;
 }
+.kinder-subtitle-timea {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 0.2rem;
+    margin-top: 3rem;
+}
 .level-main-text-box {
     max-width: 90%;
     margin: 3rem auto 0;
@@ -897,6 +886,68 @@ html, body {
     border-radius: 0.5rem;
     flex-shrink: 0;
 }
+
+.contact-form {
+    background-color: #e2e4ed; 
+    padding: 3rem;
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 3rem;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 100%; 
+    resize: none;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.btn-enviar {
+    background-color: transparent;
+    color: #1d3062;
+    border: 1.5px solid #1d3062;
+    padding: 0.6rem 2.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;   
+    }
+}
 /* ====================================
    Footer
    ==================================== */
@@ -954,11 +1005,24 @@ html, body {
     }
 }
 .footer-social-bar {
-    max-width: 1280px;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5rem 1rem;
     text-align: center; 
+}
+.footer-content-flex {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.footer-contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
 }
 .social-links {
     display: flex;
@@ -966,6 +1030,7 @@ html, body {
     align-items: center; 
     gap: 1rem; 
     flex-wrap: wrap;
+    margin-left: 40px;
 }
 @media (min-width: 700px) {
     .social-links {
@@ -973,8 +1038,8 @@ html, body {
     }
 }
 .logosredes{
-    width: 60px; 
-    height: 60px;
+    width: 35px; 
+    height: 35px;
     object-fit: contain; 
     transition: opacity 0.3s;
 }
@@ -984,4 +1049,16 @@ html, body {
     font-weight: 500;
     white-space: nowrap; 
 }
+.contact-detail-link {
+    color: var(--color-white);
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .footer-content-flex {
+        flex-direction: column; 
+        text-align: center;
+        gap: 20px; 
+        padding: 20px 10px;
+    }
 
+}
