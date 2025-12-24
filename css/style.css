@@ -888,7 +888,7 @@ html, body {
 }
 
 .contact-form {
-    background-color: #f1e6e6; 
+    background-color: var(--color-gray-50); 
     padding: 3rem;
     max-width: 80%;
     width: 95%;
@@ -954,8 +954,30 @@ html, body {
 }
 
 @media (max-width: 768px) {
+    .contact-form {
+        padding: 1.5rem; 
+        max-width: 95%; 
+        margin: 1rem auto;
+        box-sizing: border-box;
+    }
+
     .form-grid {
-        grid-template-columns: 1fr;   
+        grid-template-columns: 1fr; 
+        gap: 1.2rem; 
+    }
+
+    .contact-form textarea {
+        height: 150px; 
+    }
+
+    .form-footer {
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    
+    .btn-enviar {
+        width: 100%; 
+        padding: 0.8rem;
     }
 }
 /* ====================================
